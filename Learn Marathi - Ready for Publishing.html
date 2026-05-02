@@ -1,0 +1,1166 @@
+<!DOCTYPE html>
+<html lang="mr"><head><style id="qw-theme">:root {
+  --color-bg: #faf9fc;
+  --color-text: #1a1a1a;
+  --color-navbar-bg: #f9f9fb;
+  --color-bg-chat-view: #fcfcfd;
+  --color-bg-secondary: #ffffff;
+  --color-bg-tertiary: #f9fafb;
+  --color-bg-hover: #f3f4f6;
+  --color-surface: #f9fafb;
+  --color-surface-hover: #f3f4f6;
+  --color-surface-active: #e5e7eb;
+  --color-border: rgba(0, 0, 0, .12);
+  --color-border-light: rgba(0, 0, 0, .06);
+  --color-border-strong: #d1d5db;
+  --color-primary: #4200db;
+  --color-primary-dark: #35009e;
+  --color-primary-light: #8575ff;
+  --color-primary-bg: #e8e6ff;
+  --color-primary-hover-border: #35009e;
+  --color-nav-icon-active: #4200db;
+  --color-nav-hover-border: #4200db;
+  --color-primary-alpha-3: color-mix(in srgb, #4200db 3%, transparent);
+  --color-primary-alpha-5: color-mix(in srgb, #4200db 5%, transparent);
+  --color-primary-alpha-8: color-mix(in srgb, #4200db 8%, transparent);
+  --color-primary-alpha-12: color-mix(in srgb, #4200db 12%, transparent);
+  --color-primary-alpha-15: color-mix(in srgb, #4200db 15%, transparent);
+  --color-primary-alpha-20: color-mix(in srgb, #4200db 20%, transparent);
+  --color-primary-alpha-25: color-mix(in srgb, #4200db 25%, transparent);
+  --color-primary-alpha-30: color-mix(in srgb, #4200db 30%, transparent);
+  --color-primary-alpha-40: color-mix(in srgb, #4200db 40%, transparent);
+  --color-primary-alpha-50: color-mix(in srgb, #4200db 50%, transparent);
+  --color-primary-alpha-60: color-mix(in srgb, #4200db 60%, transparent);
+  --color-primary-subtle: color-mix(in srgb, #4200db 12%, transparent);
+  --color-primary-border: color-mix(in srgb, #4200db 30%, transparent);
+  --color-focus-ring: color-mix(in srgb, #4200db 50%, transparent);
+  --color-sidebar-hover: color-mix(in srgb, #4200db 12%, transparent);
+  --color-accent: #4200db;
+  --color-accent-foreground: #4200db;
+  --color-accent-dark: #35009e;
+  --color-accent-light: #e8e6ff;
+  --color-accent-inverse: #ffffff;
+  --color-link: #4200db;
+  --color-primary-gradient-end: #e8e6ff;
+  --color-primary-bg-solid: #e8e6ff;
+  --color-user-bubble: #F3F3F7;
+  --color-text-secondary: #5e5e5e;
+  --color-text-tertiary: #656871;
+  --color-text-muted: #9ca3af;
+  --color-text-on-primary: #ffffff;
+  --color-success: #00802f;
+  --color-success-dark: #00471e;
+  --color-success-light: #d9ffd6;
+  --color-success-hover: #005c26;
+  --color-success-bg: rgba(0, 128, 47, .1);
+  --color-success-border: rgba(0, 128, 47, .3);
+  --color-success-foreground: #00802f;
+  --color-success-dark-foreground: #00471e;
+  --color-error: #db0000;
+  --color-error-dark: #700000;
+  --color-error-light: #ffe0e0;
+  --color-error-hover: #ffe0e0;
+  --color-error-bg: rgba(219, 0, 0, .08);
+  --color-error-border: #ffe0e0;
+  --color-error-active-border: #db0000;
+  --color-error-foreground: #db0000;
+  --color-error-dark-foreground: #700000;
+  --color-error-inverse: #ffffff;
+  --color-warning: #f2b100;
+  --color-warning-dark: #573a00;
+  --color-warning-light: #fffbbd;
+  --color-warning-hover: #db9200;
+  --color-warning-bg: rgba(242, 177, 0, .1);
+  --color-warning-border: rgba(242, 177, 0, .3);
+  --color-warning-foreground: #f2b100;
+  --color-warning-dark-foreground: #573a00;
+  --color-warning-inverse: #573a00;
+  --color-surface-warning: #fffbbd;
+  --color-text-warning: #573a00;
+  --color-info: #006ce0;
+  --color-info-dark: #002a66;
+  --color-info-light: #d1f1ff;
+  --color-info-hover: #003b8f;
+  --color-info-bg: rgba(0, 108, 224, .08);
+  --color-info-border: rgba(0, 108, 224, .3);
+  --color-info-foreground: #006ce0;
+  --color-info-dark-foreground: #002a66;
+  --color-info-inverse: #ffffff;
+  --color-overlay: rgba(0, 0, 0, .5);
+  --color-shadow: rgba(0, 0, 0, .08);
+  --color-hover: rgba(0, 0, 0, .05);
+  --color-tooltip-bg: rgba(0, 0, 0, .85);
+  --color-tooltip-text: #ffffff;
+  --color-voice-purple: #8575ff;
+  --color-voice-purple-dark: #4200db;
+  --color-voice-purple-light: #8575ff;
+  --color-voice-red: #db0000;
+  --color-voice-red-dark: #700000;
+  --color-voice-amber: #f2b100;
+  --color-voice-purple-glow: rgba(66, 0, 219, .4);
+  --color-voice-red-glow: rgba(219, 0, 0, .4);
+  --font-sans: "Amazon Ember", "Helvetica Neue", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-mono: "SF Mono", "Monaco", "Menlo", "Consolas", monospace;
+  --text-2xs: .5625rem;
+  --text-xs: .625rem;
+  --text-sm: .6875rem;
+  --text-base: .75rem;
+  --text-md: .8125rem;
+  --text-lg: .875rem;
+  --text-xl: 1rem;
+  --text-2xl: 1.125rem;
+  --text-3xl: 1.25rem;
+  --text-4xl: 1.5rem;
+  --text-5xl: 2rem;
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-card: 12px;
+  --radius-lg: 16px;
+  --radius-pill: 8px;
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, .05);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, .08);
+  --color-success-bg-solid: #d9ffd6;
+  --color-error-bg-solid: #ffe0e0;
+  --color-error-border-solid: #ffe0e0;
+  --color-warning-bg-solid: #fffbbd;
+  --color-warning-text: #573a00;
+  --color-info-bg-solid: #d1f1ff;
+  --color-info-bg-solid-alt: #d1f1ff;
+  --color-info-text: #002a66;
+  --color-info-text-alt: #002a66;
+  --color-emerald: #10b981;
+  --color-teal: #4ecdc4;
+  --color-code-bg: #F3F3F7;
+  --color-code-header-bg: #f1f3f5;
+  --color-code-text: #24292e;
+  --color-code-border: #e1e4e8;
+  --color-code-muted: #6a737d;
+  --color-inline-code-bg: #F3F3F7;
+  --color-inline-code-text: #24292e;
+  --color-inline-code-border: #e1e4e8;
+  --color-scrollbar-thumb: #d1d5db;
+  --color-scrollbar-track: transparent;
+  --color-graph-node-text: #333333;
+  --color-graph-node-text-dim: #7F8C8D;
+  --color-graph-edge-default: #95A5A6;
+  --color-graph-edge-cross: #E67E22;
+  --color-graph-edge-text: #666666;
+  --color-graph-edge-stroke: #ffffff;
+  --color-graph-highlight-bg: #FF6B6B;
+  --color-graph-highlight-border: #E74C3C;
+  --color-graph-search-bg: #FFD700;
+  --color-graph-search-border: #FFA500;
+  --color-graph-focus-border: #C0392B;
+  --color-graph-external-border: #95A5A6;
+  --color-graph-cat-file: #3498DB;
+  --color-graph-cat-folder: #7F8C8D;
+  --color-graph-cat-file-aggregate: #2980B9;
+  --color-graph-cat-class: #9B59B6;
+  --color-graph-cat-function: #2ECC71;
+  --color-graph-cat-method: #1ABC9C;
+  --color-graph-cat-variable: #F39C12;
+  --color-graph-cat-import: #D35400;
+  --color-graph-cat-module: #5B6ABF;
+  --color-graph-cat-concept: #E74C3C;
+  --color-graph-cat-person: #FF6B6B;
+  --color-graph-cat-org: #4ECDC4;
+  --color-graph-cat-organization: #4ECDC4;
+  --color-graph-cat-product: #A29BFE;
+  --color-graph-cat-metric: #FD79A8;
+  --color-graph-cat-location: #34495E;
+  --color-graph-cat-date: #E056A0;
+  --color-graph-cat-code: #3498DB;
+  --color-graph-cat-doc: #7F8C8D;
+  --color-graph-cat-url: #00B894;
+  --color-graph-cat-email: #6C5CE7;
+  --color-graph-cat-unknown: #BDC3C7;
+  --color-graph-rel-contains: #BDC3C7;
+  --color-graph-rel-extends: #9B59B6;
+  --color-graph-rel-implements: #3498DB;
+  --color-graph-rel-imports: #E67E22;
+  --color-graph-rel-uses: #2ECC71;
+  --color-graph-rel-calls: #27AE60;
+  --color-graph-rel-references: #F39C12;
+  --color-graph-rel-related-to: #95A5A6;
+  --color-graph-rel-works-on: #E74C3C;
+  --color-graph-rel-owns: #1ABC9C;
+  --color-graph-rel-depends-on: #E67E22;
+  --color-graph-rel-parent-of: #BDC3C7;
+  --qs-content: #ffffff;
+  --qs-main: #f9fafb;
+  --qs-primary-foreground: #1a1a1a;
+  --qs-secondary-foreground: #5e5e5e;
+  --qs-tertiary-foreground: #9ca3af;
+  --qs-placeholder-foreground: #9ca3af;
+  --qs-divider: rgba(0, 0, 0, .12);
+  --qs-default-border: rgba(0, 0, 0, .12);
+  --qs-neutral-soft: #d1d5db;
+  --qs-neutral-gray-50: #f9fafb;
+  --qs-tertiary-background: #f9fafb;
+  --qs-action-hover: rgba(0, 0, 0, .05);
+  --qs-primary-default: #4200db;
+  --qs-primary-dark: #35009e;
+  --qs-primary-light: #e8e6ff;
+  --qs-success-default: #00802f;
+  --qs-error-default: #db0000;
+  --qs-font-sans: "Amazon Ember", "Helvetica Neue", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --react-pdf-text-layer: 1;
+  --highlight-bg-color: rgba(180, 0, 170, 1);
+  --highlight-selected-bg-color: rgba(0, 100, 0, 1);
+  --react-pdf-annotation-layer: 1;
+  --annotation-unfocused-field-background: url("data:image/svg+xml;charset=UTF-8,<svg width='1px' height='1px' xmlns='http://www.w3.org/2000/svg'><rect width='100%' height='100%' style='fill:rgba(0, 54, 255, 0.13);'/></svg>");
+  --input-focus-border-color: Highlight;
+  --input-focus-outline: 1px solid Canvas;
+  --input-unfocused-border-color: transparent;
+  --input-disabled-border-color: transparent;
+  --input-hover-border-color: black;
+  --link-outline: none;
+}
+body { background: var(--color-bg); }</style>
+<title>Learn Marathi - मराठी शिकूया!</title><meta charset="UTF-8">
+<meta name="description" content="Learn Marathi - Fun interactive notes for kids and beginners. Learn alphabets, numbers, colors, animals, phrases and more!">
+<meta name="keywords" content="Learn Marathi, Marathi for kids, Marathi alphabet, मराठी शिकूया">
+<meta property="og:title" content="Learn Marathi - मराठी शिकूया!">
+<meta property="og:description" content="Fun interactive Marathi learning notes for kids and beginners">
+<meta property="og:type" content="website">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;600;700&family=Nunito:wght@400;600;700;800&display=swap');
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Nunito', 'Noto Sans Devanagari', sans-serif; background: #FFF8F0; color: #333; padding: 24px; line-height: 1.6; }
+  
+  .header { text-align: center; padding: 32px 16px; background: linear-gradient(135deg, #FF6B6B, #FFB347, #4ECDC4, #45B7D1); border-radius: 24px; margin-bottom: 28px; color: white; }
+  .header h1 { font-size: 36px; font-weight: 800; text-shadow: 2px 2px 4px rgba(0,0,0,0.2); margin-bottom: 4px; }
+  .header .subtitle { font-size: 16px; opacity: 0.95; font-weight: 600; }
+  .header .emoji-row { font-size: 28px; margin-top: 8px; }
+
+  .section { margin-bottom: 28px; }
+  .section-title { font-size: 22px; font-weight: 800; margin-bottom: 14px; padding: 10px 18px; border-radius: 16px; display: inline-block; }
+  .st-orange { background: #FFE0B2; color: #E65100; }
+  .st-blue { background: #BBDEFB; color: #1565C0; }
+  .st-green { background: #C8E6C9; color: #2E7D32; }
+  .st-pink { background: #F8BBD0; color: #C2185B; }
+  .st-purple { background: #E1BEE7; color: #7B1FA2; }
+  .st-teal { background: #B2DFDB; color: #00695C; }
+  .st-red { background: #FFCDD2; color: #C62828; }
+  .st-yellow { background: #FFF9C4; color: #F57F17; }
+
+  .card-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(130px, 1fr)); gap: 12px; }
+  .card { background: white; border-radius: 16px; padding: 14px 10px; text-align: center; box-shadow: 0 2px 8px rgba(0,0,0,0.07); border: 2px solid #f0f0f0; transition: transform 0.2s, box-shadow 0.2s; }
+  .card:hover { transform: translateY(-3px); box-shadow: 0 6px 16px rgba(0,0,0,0.12); }
+  .card .emoji { font-size: 32px; margin-bottom: 6px; }
+  .card .marathi { font-size: 22px; font-weight: 700; color: #333; font-family: 'Noto Sans Devanagari', sans-serif; }
+  .card .translit { font-size: 13px; font-weight: 600; color: #888; margin-top: 2px; }
+  .card .english { font-size: 12px; color: #aaa; margin-top: 2px; }
+  .number-card .marathi { color: #1565C0; }
+
+  .alpha-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(70px, 1fr)); gap: 8px; }
+  .alpha-card { background: white; border-radius: 12px; padding: 10px 6px; text-align: center; box-shadow: 0 2px 6px rgba(0,0,0,0.06); border: 2px solid #f0f0f0; }
+  .alpha-card .letter { font-size: 28px; font-weight: 700; font-family: 'Noto Sans Devanagari', sans-serif; color: #E65100; }
+  .alpha-card .sound { font-size: 11px; color: #777; font-weight: 600; }
+
+  .phrase-grid { display: grid; gap: 10px; }
+  .phrase-card { background: white; border-radius: 14px; padding: 14px 18px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); border-left: 5px solid; display: flex; align-items: center; gap: 14px; }
+  .phrase-card .emoji { font-size: 28px; flex-shrink: 0; }
+  .phrase-card .text .marathi { font-size: 20px; font-weight: 700; font-family: 'Noto Sans Devanagari', sans-serif; }
+  .phrase-card .text .translit { font-size: 13px; color: #888; font-weight: 600; }
+  .phrase-card .text .english { font-size: 13px; color: #aaa; }
+
+  .color-swatch { width: 28px; height: 28px; border-radius: 50%; display: inline-block; margin-bottom: 6px; border: 2px solid rgba(0,0,0,0.1); }
+
+  .tip-box { background: #E8F5E9; border-radius: 16px; padding: 18px 20px; margin-top: 24px; border: 2px dashed #66BB6A; }
+  .tip-box h3 { color: #2E7D32; font-size: 18px; margin-bottom: 8px; }
+  .tip-box ul { padding-left: 20px; color: #555; font-size: 14px; }
+  .tip-box li { margin-bottom: 6px; }
+
+  /* Level banners */
+  .level-banner { text-align: center; padding: 24px 16px; border-radius: 24px; margin-bottom: 28px; color: white; }
+  .level2-banner { background: linear-gradient(135deg, #7C4DFF, #448AFF, #00BCD4); }
+  .level3-banner { background: linear-gradient(135deg, #FF6F00, #F44336, #9C27B0, #3F51B5); }
+  .level-banner h2 { font-size: 28px; font-weight: 800; text-shadow: 2px 2px 4px rgba(0,0,0,0.2); }
+  .level-banner .subtitle { font-size: 14px; opacity: 0.9; }
+
+  /* Rhyme box */
+  .rhyme-box { background: linear-gradient(135deg, #FFF3E0, #FFF8E1); border-radius: 20px; padding: 24px; border: 2px solid #FFB74D; text-align: center; margin-top: 8px; }
+  .rhyme-box .marathi-line { font-size: 20px; font-weight: 700; font-family: 'Noto Sans Devanagari', sans-serif; color: #E65100; line-height: 2; }
+  .rhyme-box .translit-line { font-size: 13px; color: #888; font-style: italic; margin-bottom: 8px; }
+  .rhyme-box .english-line { font-size: 13px; color: #999; margin-bottom: 12px; }
+  .rhyme-box .divider { border: none; border-top: 1px dashed #FFB74D; margin: 12px 0; }
+
+  /* Conversation */
+  .convo-grid { display: grid; gap: 12px; }
+  .convo-card { background: white; border-radius: 16px; padding: 16px 20px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); display: grid; grid-template-columns: auto 1fr; gap: 14px; align-items: center; }
+  .convo-card .speaker { font-size: 32px; }
+  .convo-card .bubble { background: #F5F5F5; border-radius: 14px; padding: 10px 16px; }
+  .convo-card .bubble.reply { background: #E3F2FD; }
+  .convo-card .bubble .marathi { font-size: 18px; font-weight: 700; font-family: 'Noto Sans Devanagari', sans-serif; }
+  .convo-card .bubble .translit { font-size: 12px; color: #888; }
+  .convo-card .bubble .english { font-size: 12px; color: #aaa; }
+
+  /* Story */
+  .story-box { background: linear-gradient(135deg, #E8EAF6, #F3E5F5); border-radius: 20px; padding: 24px; border: 2px solid #B39DDB; margin-top: 8px; }
+  .story-box .story-title { font-size: 20px; font-weight: 800; color: #5E35B1; text-align: center; margin-bottom: 14px; }
+  .story-line { display: flex; gap: 12px; align-items: flex-start; margin-bottom: 12px; }
+  .story-line .emoji { font-size: 24px; flex-shrink: 0; }
+  .story-line .marathi { font-size: 18px; font-weight: 700; font-family: 'Noto Sans Devanagari', sans-serif; color: #333; }
+  .story-line .translit { font-size: 12px; color: #888; }
+  .story-line .english { font-size: 12px; color: #aaa; }
+
+  /* Quiz */
+  .quiz-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 14px; }
+  .quiz-card { background: white; border-radius: 16px; padding: 18px; box-shadow: 0 2px 8px rgba(0,0,0,0.07); border: 2px solid #E0E0E0; }
+  .quiz-card .q { font-size: 15px; font-weight: 700; color: #333; margin-bottom: 10px; }
+  .quiz-card .options { display: flex; flex-wrap: wrap; gap: 8px; }
+  .quiz-card .opt { padding: 8px 16px; border-radius: 24px; border: 2px solid #E0E0E0; font-size: 14px; font-weight: 600; cursor: pointer; transition: all 0.2s; background: #FAFAFA; user-select: none; }
+  .quiz-card .opt:hover { border-color: #90CAF9; background: #E3F2FD; }
+  .quiz-card .opt.correct { border-color: #66BB6A; background: #E8F5E9; color: #2E7D32; }
+  .quiz-card .opt.wrong { border-color: #EF5350; background: #FFEBEE; color: #C62828; }
+  .quiz-card .feedback { margin-top: 8px; font-size: 14px; font-weight: 600; display: none; }
+
+  /* Grammar */
+  .grammar-table { width: 100%; border-collapse: collapse; font-size: 14px; background: white; border-radius: 14px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.06); margin-top: 10px; }
+  .grammar-table th { background: #E8EAF6; color: #283593; font-weight: 700; padding: 10px 14px; text-align: left; font-size: 13px; }
+  .grammar-table td { padding: 10px 14px; border-bottom: 1px solid #F0F0F0; color: #444; }
+  .grammar-table tr:last-child td { border-bottom: none; }
+  .grammar-table .mr { font-family: 'Noto Sans Devanagari', sans-serif; font-weight: 700; font-size: 16px; color: #333; }
+  .grammar-table .tl { font-size: 12px; color: #888; }
+
+  /* Trace / writing */
+  .trace-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); gap: 10px; margin-top: 10px; }
+  .trace-card { background: white; border-radius: 14px; padding: 12px 8px; text-align: center; box-shadow: 0 2px 6px rgba(0,0,0,0.06); border: 2px dashed #BDBDBD; }
+  .trace-card .big-letter { font-size: 48px; font-family: 'Noto Sans Devanagari', sans-serif; font-weight: 700; color: #E0E0E0; line-height: 1.2; }
+  .trace-card .guide { font-size: 11px; color: #999; font-weight: 600; }
+  .trace-card .hint { font-size: 10px; color: #bbb; margin-top: 2px; }
+
+  /* Festival */
+  .festival-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 12px; }
+  .festival-card { background: white; border-radius: 16px; padding: 16px; box-shadow: 0 2px 8px rgba(0,0,0,0.07); border-left: 5px solid; text-align: center; }
+  .festival-card .emoji { font-size: 36px; margin-bottom: 6px; }
+  .festival-card .marathi { font-size: 20px; font-weight: 700; font-family: 'Noto Sans Devanagari', sans-serif; }
+  .festival-card .translit { font-size: 12px; color: #888; font-weight: 600; }
+  .festival-card .english { font-size: 13px; color: #666; font-weight: 600; margin-top: 2px; }
+  .festival-card .desc { font-size: 11px; color: #aaa; margin-top: 4px; }
+
+  /* Sentence builder */
+  .sentence-builder { background: white; border-radius: 16px; padding: 18px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); margin-bottom: 10px; }
+  .sentence-builder .label { font-size: 12px; font-weight: 700; color: #999; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 6px; }
+  .sentence-builder .structure { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 8px; }
+  .sentence-builder .block { padding: 6px 14px; border-radius: 8px; font-size: 13px; font-weight: 700; }
+  .block-subject { background: #BBDEFB; color: #1565C0; }
+  .block-object { background: #C8E6C9; color: #2E7D32; }
+  .block-verb { background: #FFCDD2; color: #C62828; }
+  .sentence-builder .example { margin-top: 8px; padding: 10px 14px; background: #FAFAFA; border-radius: 10px; }
+  .sentence-builder .example .mr { font-size: 18px; font-weight: 700; font-family: 'Noto Sans Devanagari', sans-serif; color: #333; }
+  .sentence-builder .example .tl { font-size: 12px; color: #888; }
+  .sentence-builder .example .en { font-size: 12px; color: #aaa; }
+
+  /* Match game */
+  .match-container { display: flex; gap: 20px; flex-wrap: wrap; justify-content: center; margin-top: 10px; }
+  .match-col { display: flex; flex-direction: column; gap: 8px; }
+  .match-item { padding: 10px 18px; border-radius: 12px; font-size: 15px; font-weight: 700; cursor: pointer; transition: all 0.2s; border: 2px solid #E0E0E0; background: white; text-align: center; min-width: 120px; user-select: none; }
+  .match-item:hover { border-color: #90CAF9; background: #E3F2FD; }
+  .match-item.selected { border-color: #42A5F5; background: #BBDEFB; }
+  .match-item.matched { border-color: #66BB6A; background: #E8F5E9; opacity: 0.7; pointer-events: none; }
+  .match-item .mr { font-family: 'Noto Sans Devanagari', sans-serif; }
+  .match-score { text-align: center; font-size: 16px; font-weight: 700; color: #2E7D32; margin-top: 12px; display: none; }
+
+  .footer { text-align: center; margin-top: 28px; padding: 16px; color: #aaa; font-size: 13px; }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>🇮🇳 मराठी शिकूया! 🇮🇳</h1>
+  <div class="subtitle">Let's Learn Marathi! — Fun Notes for Little Learners</div>
+  <div class="emoji-row">🌟 🎨 🐘 🌈 🎶</div>
+</div>
+
+<!-- ========== LEVEL 1 ========== -->
+
+<!-- VOWELS -->
+<div class="section">
+  <div class="section-title st-orange">🔤 Vowels — स्वर (Swar)</div>
+  <div class="alpha-grid">
+    <div class="alpha-card"><div class="letter">अ</div><div class="sound">a</div></div>
+    <div class="alpha-card"><div class="letter">आ</div><div class="sound">aa</div></div>
+    <div class="alpha-card"><div class="letter">इ</div><div class="sound">i</div></div>
+    <div class="alpha-card"><div class="letter">ई</div><div class="sound">ee</div></div>
+    <div class="alpha-card"><div class="letter">उ</div><div class="sound">u</div></div>
+    <div class="alpha-card"><div class="letter">ऊ</div><div class="sound">oo</div></div>
+    <div class="alpha-card"><div class="letter">ए</div><div class="sound">e</div></div>
+    <div class="alpha-card"><div class="letter">ऐ</div><div class="sound">ai</div></div>
+    <div class="alpha-card"><div class="letter">ओ</div><div class="sound">o</div></div>
+    <div class="alpha-card"><div class="letter">औ</div><div class="sound">au</div></div>
+    <div class="alpha-card"><div class="letter">अं</div><div class="sound">am</div></div>
+    <div class="alpha-card"><div class="letter">अः</div><div class="sound">ah</div></div>
+  </div>
+</div>
+
+<!-- CONSONANTS -->
+<div class="section">
+  <div class="section-title st-blue">🗣️ Consonants — व्यंजन (Vyanjan)</div>
+  <div class="alpha-grid">
+    <div class="alpha-card"><div class="letter">क</div><div class="sound">ka</div></div>
+    <div class="alpha-card"><div class="letter">ख</div><div class="sound">kha</div></div>
+    <div class="alpha-card"><div class="letter">ग</div><div class="sound">ga</div></div>
+    <div class="alpha-card"><div class="letter">घ</div><div class="sound">gha</div></div>
+    <div class="alpha-card"><div class="letter">च</div><div class="sound">cha</div></div>
+    <div class="alpha-card"><div class="letter">छ</div><div class="sound">chha</div></div>
+    <div class="alpha-card"><div class="letter">ज</div><div class="sound">ja</div></div>
+    <div class="alpha-card"><div class="letter">झ</div><div class="sound">jha</div></div>
+    <div class="alpha-card"><div class="letter">ट</div><div class="sound">ta</div></div>
+    <div class="alpha-card"><div class="letter">ठ</div><div class="sound">tha</div></div>
+    <div class="alpha-card"><div class="letter">ड</div><div class="sound">da</div></div>
+    <div class="alpha-card"><div class="letter">ढ</div><div class="sound">dha</div></div>
+    <div class="alpha-card"><div class="letter">ण</div><div class="sound">na</div></div>
+    <div class="alpha-card"><div class="letter">त</div><div class="sound">ta</div></div>
+    <div class="alpha-card"><div class="letter">थ</div><div class="sound">tha</div></div>
+    <div class="alpha-card"><div class="letter">द</div><div class="sound">da</div></div>
+    <div class="alpha-card"><div class="letter">ध</div><div class="sound">dha</div></div>
+    <div class="alpha-card"><div class="letter">न</div><div class="sound">na</div></div>
+    <div class="alpha-card"><div class="letter">प</div><div class="sound">pa</div></div>
+    <div class="alpha-card"><div class="letter">फ</div><div class="sound">pha</div></div>
+    <div class="alpha-card"><div class="letter">ब</div><div class="sound">ba</div></div>
+    <div class="alpha-card"><div class="letter">भ</div><div class="sound">bha</div></div>
+    <div class="alpha-card"><div class="letter">म</div><div class="sound">ma</div></div>
+    <div class="alpha-card"><div class="letter">य</div><div class="sound">ya</div></div>
+    <div class="alpha-card"><div class="letter">र</div><div class="sound">ra</div></div>
+    <div class="alpha-card"><div class="letter">ल</div><div class="sound">la</div></div>
+    <div class="alpha-card"><div class="letter">व</div><div class="sound">va</div></div>
+    <div class="alpha-card"><div class="letter">श</div><div class="sound">sha</div></div>
+    <div class="alpha-card"><div class="letter">ष</div><div class="sound">sha</div></div>
+    <div class="alpha-card"><div class="letter">स</div><div class="sound">sa</div></div>
+    <div class="alpha-card"><div class="letter">ह</div><div class="sound">ha</div></div>
+    <div class="alpha-card"><div class="letter">ळ</div><div class="sound">La</div></div>
+    <div class="alpha-card"><div class="letter">क्ष</div><div class="sound">ksha</div></div>
+    <div class="alpha-card"><div class="letter">ज्ञ</div><div class="sound">dnya</div></div>
+  </div>
+</div>
+
+<!-- NUMBERS 1-10 -->
+<div class="section">
+  <div class="section-title st-purple">🔢 Numbers 1–10 — अंक (Ank)</div>
+  <div class="card-grid">
+    <div class="card number-card"><div class="emoji">1️⃣</div><div class="marathi">एक</div><div class="translit">Ek</div><div class="english">One</div></div>
+    <div class="card number-card"><div class="emoji">2️⃣</div><div class="marathi">दोन</div><div class="translit">Don</div><div class="english">Two</div></div>
+    <div class="card number-card"><div class="emoji">3️⃣</div><div class="marathi">तीन</div><div class="translit">Teen</div><div class="english">Three</div></div>
+    <div class="card number-card"><div class="emoji">4️⃣</div><div class="marathi">चार</div><div class="translit">Chaar</div><div class="english">Four</div></div>
+    <div class="card number-card"><div class="emoji">5️⃣</div><div class="marathi">पाच</div><div class="translit">Paach</div><div class="english">Five</div></div>
+    <div class="card number-card"><div class="emoji">6️⃣</div><div class="marathi">सहा</div><div class="translit">Sahaa</div><div class="english">Six</div></div>
+    <div class="card number-card"><div class="emoji">7️⃣</div><div class="marathi">सात</div><div class="translit">Saath</div><div class="english">Seven</div></div>
+    <div class="card number-card"><div class="emoji">8️⃣</div><div class="marathi">आठ</div><div class="translit">Aath</div><div class="english">Eight</div></div>
+    <div class="card number-card"><div class="emoji">9️⃣</div><div class="marathi">नऊ</div><div class="translit">Nau</div><div class="english">Nine</div></div>
+    <div class="card number-card"><div class="emoji">🔟</div><div class="marathi">दहा</div><div class="translit">Dahaa</div><div class="english">Ten</div></div>
+  </div>
+</div>
+
+<!-- COLORS -->
+<div class="section">
+  <div class="section-title st-pink">🎨 Colors — रंग (Rang)</div>
+  <div class="card-grid">
+    <div class="card"><div class="color-swatch" style="background:#EF5350"></div><div class="marathi">लाल</div><div class="translit">Laal</div><div class="english">Red</div></div>
+    <div class="card"><div class="color-swatch" style="background:#42A5F5"></div><div class="marathi">निळा</div><div class="translit">Neelaa</div><div class="english">Blue</div></div>
+    <div class="card"><div class="color-swatch" style="background:#66BB6A"></div><div class="marathi">हिरवा</div><div class="translit">Hirvaa</div><div class="english">Green</div></div>
+    <div class="card"><div class="color-swatch" style="background:#FFEE58"></div><div class="marathi">पिवळा</div><div class="translit">Pivlaa</div><div class="english">Yellow</div></div>
+    <div class="card"><div class="color-swatch" style="background:#FF7043"></div><div class="marathi">नारंगी</div><div class="translit">Naarangi</div><div class="english">Orange</div></div>
+    <div class="card"><div class="color-swatch" style="background:#F5F5F5;border-color:#ccc"></div><div class="marathi">पांढरा</div><div class="translit">Paandhraa</div><div class="english">White</div></div>
+    <div class="card"><div class="color-swatch" style="background:#333"></div><div class="marathi">काळा</div><div class="translit">Kaalaa</div><div class="english">Black</div></div>
+    <div class="card"><div class="color-swatch" style="background:#EC407A"></div><div class="marathi">गुलाबी</div><div class="translit">Gulaabi</div><div class="english">Pink</div></div>
+  </div>
+</div>
+
+<!-- ANIMALS -->
+<div class="section">
+  <div class="section-title st-green">🐾 Animals — प्राणी (Praani)</div>
+  <div class="card-grid">
+    <div class="card"><div class="emoji">🐱</div><div class="marathi">मांजर</div><div class="translit">Maanjar</div><div class="english">Cat</div></div>
+    <div class="card"><div class="emoji">🐶</div><div class="marathi">कुत्रा</div><div class="translit">Kutraa</div><div class="english">Dog</div></div>
+    <div class="card"><div class="emoji">🐄</div><div class="marathi">गाय</div><div class="translit">Gaay</div><div class="english">Cow</div></div>
+    <div class="card"><div class="emoji">🐘</div><div class="marathi">हत्ती</div><div class="translit">Hatti</div><div class="english">Elephant</div></div>
+    <div class="card"><div class="emoji">🐦</div><div class="marathi">पक्षी</div><div class="translit">Pakshi</div><div class="english">Bird</div></div>
+    <div class="card"><div class="emoji">🐟</div><div class="marathi">मासा</div><div class="translit">Maasaa</div><div class="english">Fish</div></div>
+    <div class="card"><div class="emoji">🐒</div><div class="marathi">माकड</div><div class="translit">Maakad</div><div class="english">Monkey</div></div>
+    <div class="card"><div class="emoji">🦁</div><div class="marathi">सिंह</div><div class="translit">Sinh</div><div class="english">Lion</div></div>
+    <div class="card"><div class="emoji">🐎</div><div class="marathi">घोडा</div><div class="translit">Ghodaa</div><div class="english">Horse</div></div>
+    <div class="card"><div class="emoji">🐢</div><div class="marathi">कासव</div><div class="translit">Kaasav</div><div class="english">Tortoise</div></div>
+  </div>
+</div>
+
+<!-- FRUITS -->
+<div class="section">
+  <div class="section-title st-red">🍎 Fruits — फळे (Phale)</div>
+  <div class="card-grid">
+    <div class="card"><div class="emoji">🍎</div><div class="marathi">सफरचंद</div><div class="translit">Safarchand</div><div class="english">Apple</div></div>
+    <div class="card"><div class="emoji">🍌</div><div class="marathi">केळे</div><div class="translit">Kele</div><div class="english">Banana</div></div>
+    <div class="card"><div class="emoji">🥭</div><div class="marathi">आंबा</div><div class="translit">Aambaa</div><div class="english">Mango</div></div>
+    <div class="card"><div class="emoji">🍇</div><div class="marathi">द्राक्षे</div><div class="translit">Draakshe</div><div class="english">Grapes</div></div>
+    <div class="card"><div class="emoji">🍉</div><div class="marathi">कलिंगड</div><div class="translit">Kalingad</div><div class="english">Watermelon</div></div>
+    <div class="card"><div class="emoji">🍊</div><div class="marathi">संत्रे</div><div class="translit">Santre</div><div class="english">Orange</div></div>
+  </div>
+</div>
+
+<!-- BODY PARTS -->
+<div class="section">
+  <div class="section-title st-teal">🧒 Body Parts — शरीराचे अवयव</div>
+  <div class="card-grid">
+    <div class="card"><div class="emoji">👀</div><div class="marathi">डोळे</div><div class="translit">Dole</div><div class="english">Eyes</div></div>
+    <div class="card"><div class="emoji">👃</div><div class="marathi">नाक</div><div class="translit">Naak</div><div class="english">Nose</div></div>
+    <div class="card"><div class="emoji">👂</div><div class="marathi">कान</div><div class="translit">Kaan</div><div class="english">Ear</div></div>
+    <div class="card"><div class="emoji">👄</div><div class="marathi">तोंड</div><div class="translit">Tond</div><div class="english">Mouth</div></div>
+    <div class="card"><div class="emoji">🤚</div><div class="marathi">हात</div><div class="translit">Haath</div><div class="english">Hand</div></div>
+    <div class="card"><div class="emoji">🦶</div><div class="marathi">पाय</div><div class="translit">Paay</div><div class="english">Leg/Foot</div></div>
+    <div class="card"><div class="emoji">🧠</div><div class="marathi">डोके</div><div class="translit">Doke</div><div class="english">Head</div></div>
+    <div class="card"><div class="emoji">😁</div><div class="marathi">दात</div><div class="translit">Daath</div><div class="english">Teeth</div></div>
+  </div>
+</div>
+
+<!-- FAMILY -->
+<div class="section">
+  <div class="section-title st-yellow">👨‍👩‍👧 Family — कुटुंब (Kutumb)</div>
+  <div class="card-grid">
+    <div class="card"><div class="emoji">👩</div><div class="marathi">आई</div><div class="translit">Aai</div><div class="english">Mother</div></div>
+    <div class="card"><div class="emoji">👨</div><div class="marathi">बाबा</div><div class="translit">Baabaa</div><div class="english">Father</div></div>
+    <div class="card"><div class="emoji">👵</div><div class="marathi">आजी</div><div class="translit">Aaji</div><div class="english">Grandmother</div></div>
+    <div class="card"><div class="emoji">👴</div><div class="marathi">आजोबा</div><div class="translit">Aajobaa</div><div class="english">Grandfather</div></div>
+    <div class="card"><div class="emoji">👦</div><div class="marathi">भाऊ</div><div class="translit">Bhaau</div><div class="english">Brother</div></div>
+    <div class="card"><div class="emoji">👧</div><div class="marathi">बहीण</div><div class="translit">Baheen</div><div class="english">Sister</div></div>
+  </div>
+</div>
+
+<!-- EVERYDAY PHRASES -->
+<div class="section">
+  <div class="section-title st-orange">💬 Everyday Phrases — रोजचे वाक्ये</div>
+  <div class="phrase-grid">
+    <div class="phrase-card" style="border-color:#FF7043"><div class="emoji">🙏</div><div class="text"><div class="marathi">नमस्कार!</div><div class="translit">Namaskaar!</div><div class="english">Hello!</div></div></div>
+    <div class="phrase-card" style="border-color:#42A5F5"><div class="emoji">😊</div><div class="text"><div class="marathi">तू कसा/कशी आहेस?</div><div class="translit">Tu kasaa / kashee aahes?</div><div class="english">How are you? (boy/girl)</div></div></div>
+    <div class="phrase-card" style="border-color:#66BB6A"><div class="emoji">😃</div><div class="text"><div class="marathi">मी मजेत आहे!</div><div class="translit">Mi majet aahe!</div><div class="english">I am fine!</div></div></div>
+    <div class="phrase-card" style="border-color:#AB47BC"><div class="emoji">🙏</div><div class="text"><div class="marathi">धन्यवाद!</div><div class="translit">Dhanyavaad!</div><div class="english">Thank you!</div></div></div>
+    <div class="phrase-card" style="border-color:#EF5350"><div class="emoji">❤️</div><div class="text"><div class="marathi">मला आई आवडते!</div><div class="translit">Mala Aai aavadte!</div><div class="english">I love Mom!</div></div></div>
+    <div class="phrase-card" style="border-color:#FFA726"><div class="emoji">🍽️</div><div class="text"><div class="marathi">मला भूक लागली!</div><div class="translit">Mala bhook laagli!</div><div class="english">I am hungry!</div></div></div>
+    <div class="phrase-card" style="border-color:#26C6DA"><div class="emoji">💧</div><div class="text"><div class="marathi">मला पाणी हवे!</div><div class="translit">Mala paani have!</div><div class="english">I want water!</div></div></div>
+    <div class="phrase-card" style="border-color:#EC407A"><div class="emoji">🎮</div><div class="text"><div class="marathi">चल खेळूया!</div><div class="translit">Chal kheluya!</div><div class="english">Let's play!</div></div></div>
+    <div class="phrase-card" style="border-color:#78909C"><div class="emoji">😴</div><div class="text"><div class="marathi">शुभ रात्री!</div><div class="translit">Shubh raatri!</div><div class="english">Good night!</div></div></div>
+    <div class="phrase-card" style="border-color:#FFD54F"><div class="emoji">🌅</div><div class="text"><div class="marathi">सुप्रभात!</div><div class="translit">Suprabhaat!</div><div class="english">Good morning!</div></div></div>
+    <div class="phrase-card" style="border-color:#4DB6AC"><div class="emoji">🫧</div><div class="text"><div class="marathi">हो / नाही</div><div class="translit">Ho / Naahi</div><div class="english">Yes / No</div></div></div>
+    <div class="phrase-card" style="border-color:#7986CB"><div class="emoji">🙋</div><div class="text"><div class="marathi">कृपया</div><div class="translit">Krupayaa</div><div class="english">Please</div></div></div>
+  </div>
+</div>
+
+<!-- SIMPLE SENTENCES -->
+<div class="section">
+  <div class="section-title st-blue">📝 Simple Sentences — सोपी वाक्ये</div>
+  <div class="phrase-grid">
+    <div class="phrase-card" style="border-color:#42A5F5"><div class="emoji">👦</div><div class="text"><div class="marathi">माझे नाव ___ आहे.</div><div class="translit">Maaze naav ___ aahe.</div><div class="english">My name is ___.</div></div></div>
+    <div class="phrase-card" style="border-color:#66BB6A"><div class="emoji">🏠</div><div class="text"><div class="marathi">हे माझे घर आहे.</div><div class="translit">He maaze ghar aahe.</div><div class="english">This is my house.</div></div></div>
+    <div class="phrase-card" style="border-color:#FF7043"><div class="emoji">🐱</div><div class="text"><div class="marathi">मांजर दूध पिते.</div><div class="translit">Maanjar doodh pite.</div><div class="english">The cat drinks milk.</div></div></div>
+    <div class="phrase-card" style="border-color:#AB47BC"><div class="emoji">☀️</div><div class="text"><div class="marathi">सूर्य मोठा आहे.</div><div class="translit">Surya mothaa aahe.</div><div class="english">The sun is big.</div></div></div>
+    <div class="phrase-card" style="border-color:#26C6DA"><div class="emoji">🌧️</div><div class="text"><div class="marathi">पाऊस पडतो.</div><div class="translit">Paaus padto.</div><div class="english">It rains.</div></div></div>
+    <div class="phrase-card" style="border-color:#EF5350"><div class="emoji">🌸</div><div class="text"><div class="marathi">फूल सुंदर आहे.</div><div class="translit">Phool sundar aahe.</div><div class="english">The flower is beautiful.</div></div></div>
+  </div>
+</div>
+
+<!-- VEGETABLES -->
+<div class="section">
+  <div class="section-title st-green">🥕 Vegetables — भाज्या (Bhaajyaa)</div>
+  <div class="card-grid">
+    <div class="card"><div class="emoji">🥔</div><div class="marathi">बटाटा</div><div class="translit">Bataataa</div><div class="english">Potato</div></div>
+    <div class="card"><div class="emoji">🍅</div><div class="marathi">टोमॅटो</div><div class="translit">Tomaato</div><div class="english">Tomato</div></div>
+    <div class="card"><div class="emoji">🧅</div><div class="marathi">कांदा</div><div class="translit">Kaandaa</div><div class="english">Onion</div></div>
+    <div class="card"><div class="emoji">🥕</div><div class="marathi">गाजर</div><div class="translit">Gaajar</div><div class="english">Carrot</div></div>
+    <div class="card"><div class="emoji">🌶️</div><div class="marathi">मिरची</div><div class="translit">Mirchi</div><div class="english">Chilli</div></div>
+    <div class="card"><div class="emoji">🫛</div><div class="marathi">मटार</div><div class="translit">Mataar</div><div class="english">Peas</div></div>
+    <div class="card"><div class="emoji">🍆</div><div class="marathi">वांगे</div><div class="translit">Vaange</div><div class="english">Brinjal</div></div>
+    <div class="card"><div class="emoji">🥒</div><div class="marathi">काकडी</div><div class="translit">Kaakdi</div><div class="english">Cucumber</div></div>
+  </div>
+</div>
+
+<!-- SHAPES -->
+<div class="section">
+  <div class="section-title st-purple">🔷 Shapes — आकार (Aakaar)</div>
+  <div class="card-grid">
+    <div class="card"><div class="emoji">⭕</div><div class="marathi">वर्तुळ</div><div class="translit">Vartul</div><div class="english">Circle</div></div>
+    <div class="card"><div class="emoji">⬜</div><div class="marathi">चौरस</div><div class="translit">Chauras</div><div class="english">Square</div></div>
+    <div class="card"><div class="emoji">🔺</div><div class="marathi">त्रिकोण</div><div class="translit">Trikon</div><div class="english">Triangle</div></div>
+    <div class="card"><div class="emoji">⭐</div><div class="marathi">तारा</div><div class="translit">Taaraa</div><div class="english">Star</div></div>
+    <div class="card"><div class="emoji">💎</div><div class="marathi">हिरा</div><div class="translit">Hiraa</div><div class="english">Diamond</div></div>
+    <div class="card"><div class="emoji">❤️</div><div class="marathi">हृदय</div><div class="translit">Hruday</div><div class="english">Heart</div></div>
+  </div>
+</div>
+
+<!-- DAYS -->
+<div class="section">
+  <div class="section-title st-blue">📅 Days of the Week — आठवड्याचे दिवस</div>
+  <div class="card-grid">
+    <div class="card"><div class="emoji">☀️</div><div class="marathi">रविवार</div><div class="translit">Ravivaar</div><div class="english">Sunday</div></div>
+    <div class="card"><div class="emoji">🌙</div><div class="marathi">सोमवार</div><div class="translit">Somvaar</div><div class="english">Monday</div></div>
+    <div class="card"><div class="emoji">🔴</div><div class="marathi">मंगळवार</div><div class="translit">Mangalvaar</div><div class="english">Tuesday</div></div>
+    <div class="card"><div class="emoji">🟢</div><div class="marathi">बुधवार</div><div class="translit">Budhvaar</div><div class="english">Wednesday</div></div>
+    <div class="card"><div class="emoji">🟡</div><div class="marathi">गुरुवार</div><div class="translit">Guruvaar</div><div class="english">Thursday</div></div>
+    <div class="card"><div class="emoji">🔵</div><div class="marathi">शुक्रवार</div><div class="translit">Shukravaar</div><div class="english">Friday</div></div>
+    <div class="card"><div class="emoji">🟣</div><div class="marathi">शनिवार</div><div class="translit">Shanivaar</div><div class="english">Saturday</div></div>
+  </div>
+</div>
+
+<!-- FOOD & DRINKS -->
+<div class="section">
+  <div class="section-title st-red">🍽️ Food &amp; Drinks — खाणे आणि पेय</div>
+  <div class="card-grid">
+    <div class="card"><div class="emoji">🍚</div><div class="marathi">भात</div><div class="translit">Bhaat</div><div class="english">Rice</div></div>
+    <div class="card"><div class="emoji">🫓</div><div class="marathi">चपाती</div><div class="translit">Chapaati</div><div class="english">Roti</div></div>
+    <div class="card"><div class="emoji">🍲</div><div class="marathi">आमटी</div><div class="translit">Aamti</div><div class="english">Dal</div></div>
+    <div class="card"><div class="emoji">🥛</div><div class="marathi">दूध</div><div class="translit">Doodh</div><div class="english">Milk</div></div>
+    <div class="card"><div class="emoji">💧</div><div class="marathi">पाणी</div><div class="translit">Paani</div><div class="english">Water</div></div>
+    <div class="card"><div class="emoji">🍪</div><div class="marathi">बिस्कीट</div><div class="translit">Biskeet</div><div class="english">Biscuit</div></div>
+    <div class="card"><div class="emoji">🍦</div><div class="marathi">आईस्क्रीम</div><div class="translit">Ice cream</div><div class="english">Ice Cream</div></div>
+    <div class="card"><div class="emoji">🥚</div><div class="marathi">अंडे</div><div class="translit">Ande</div><div class="english">Egg</div></div>
+  </div>
+</div>
+
+<!-- HOME OBJECTS -->
+<div class="section">
+  <div class="section-title st-teal">🏠 Things at Home — घरातल्या वस्तू</div>
+  <div class="card-grid">
+    <div class="card"><div class="emoji">🪑</div><div class="marathi">खुर्ची</div><div class="translit">Khurchi</div><div class="english">Chair</div></div>
+    <div class="card"><div class="emoji">🛏️</div><div class="marathi">पलंग</div><div class="translit">Palang</div><div class="english">Bed</div></div>
+    <div class="card"><div class="emoji">🚪</div><div class="marathi">दार</div><div class="translit">Daar</div><div class="english">Door</div></div>
+    <div class="card"><div class="emoji">🪟</div><div class="marathi">खिडकी</div><div class="translit">Khidki</div><div class="english">Window</div></div>
+    <div class="card"><div class="emoji">📖</div><div class="marathi">पुस्तक</div><div class="translit">Pustak</div><div class="english">Book</div></div>
+    <div class="card"><div class="emoji">⏰</div><div class="marathi">घड्याळ</div><div class="translit">Ghadyaal</div><div class="english">Clock</div></div>
+    <div class="card"><div class="emoji">📺</div><div class="marathi">दूरदर्शन</div><div class="translit">Doordarshan</div><div class="english">TV</div></div>
+    <div class="card"><div class="emoji">👟</div><div class="marathi">बूट</div><div class="translit">Boot</div><div class="english">Shoes</div></div>
+  </div>
+</div>
+
+<!-- NATURE -->
+<div class="section">
+  <div class="section-title st-yellow">🌿 Nature — निसर्ग (Nisarg)</div>
+  <div class="card-grid">
+    <div class="card"><div class="emoji">☀️</div><div class="marathi">सूर्य</div><div class="translit">Surya</div><div class="english">Sun</div></div>
+    <div class="card"><div class="emoji">🌙</div><div class="marathi">चंद्र</div><div class="translit">Chandra</div><div class="english">Moon</div></div>
+    <div class="card"><div class="emoji">⭐</div><div class="marathi">तारे</div><div class="translit">Taare</div><div class="english">Stars</div></div>
+    <div class="card"><div class="emoji">🌧️</div><div class="marathi">पाऊस</div><div class="translit">Paaus</div><div class="english">Rain</div></div>
+    <div class="card"><div class="emoji">🌈</div><div class="marathi">इंद्रधनुष्य</div><div class="translit">Indradhanushya</div><div class="english">Rainbow</div></div>
+    <div class="card"><div class="emoji">🌳</div><div class="marathi">झाड</div><div class="translit">Zhaad</div><div class="english">Tree</div></div>
+    <div class="card"><div class="emoji">🌸</div><div class="marathi">फूल</div><div class="translit">Phool</div><div class="english">Flower</div></div>
+    <div class="card"><div class="emoji">⛰️</div><div class="marathi">डोंगर</div><div class="translit">Dongar</div><div class="english">Mountain</div></div>
+    <div class="card"><div class="emoji">🏞️</div><div class="marathi">नदी</div><div class="translit">Nadi</div><div class="english">River</div></div>
+    <div class="card"><div class="emoji">🌊</div><div class="marathi">समुद्र</div><div class="translit">Samudra</div><div class="english">Sea</div></div>
+  </div>
+</div>
+
+<!-- ACTIONS -->
+<div class="section">
+  <div class="section-title st-pink">🏃 Action Words — क्रियापदे (Kriyaapade)</div>
+  <div class="card-grid">
+    <div class="card"><div class="emoji">🍽️</div><div class="marathi">खाणे</div><div class="translit">Khaane</div><div class="english">Eat</div></div>
+    <div class="card"><div class="emoji">💧</div><div class="marathi">पिणे</div><div class="translit">Pine</div><div class="english">Drink</div></div>
+    <div class="card"><div class="emoji">😴</div><div class="marathi">झोपणे</div><div class="translit">Zhopne</div><div class="english">Sleep</div></div>
+    <div class="card"><div class="emoji">🏃</div><div class="marathi">धावणे</div><div class="translit">Dhaavne</div><div class="english">Run</div></div>
+    <div class="card"><div class="emoji">🚶</div><div class="marathi">चालणे</div><div class="translit">Chaalne</div><div class="english">Walk</div></div>
+    <div class="card"><div class="emoji">🎮</div><div class="marathi">खेळणे</div><div class="translit">Khelne</div><div class="english">Play</div></div>
+    <div class="card"><div class="emoji">📖</div><div class="marathi">वाचणे</div><div class="translit">Vaachne</div><div class="english">Read</div></div>
+    <div class="card"><div class="emoji">✍️</div><div class="marathi">लिहिणे</div><div class="translit">Lihine</div><div class="english">Write</div></div>
+    <div class="card"><div class="emoji">🎶</div><div class="marathi">गाणे</div><div class="translit">Gaane</div><div class="english">Sing</div></div>
+    <div class="card"><div class="emoji">💃</div><div class="marathi">नाचणे</div><div class="translit">Naachne</div><div class="english">Dance</div></div>
+    <div class="card"><div class="emoji">😂</div><div class="marathi">हसणे</div><div class="translit">Hasne</div><div class="english">Laugh</div></div>
+    <div class="card"><div class="emoji">😢</div><div class="marathi">रडणे</div><div class="translit">Radne</div><div class="english">Cry</div></div>
+  </div>
+</div>
+
+<!-- OPPOSITES -->
+<div class="section">
+  <div class="section-title st-orange">↔️ Opposites — विरुद्धार्थी शब्द</div>
+  <div class="phrase-grid" style="display:grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 10px;">
+    <div class="phrase-card" style="border-color:#FF7043"><div class="emoji">⬆️⬇️</div><div class="text"><div class="marathi">मोठे ↔ लहान</div><div class="translit">Mothe ↔ Lahaan</div><div class="english">Big ↔ Small</div></div></div>
+    <div class="phrase-card" style="border-color:#42A5F5"><div class="emoji">🔥❄️</div><div class="text"><div class="marathi">गरम ↔ थंड</div><div class="translit">Garam ↔ Thand</div><div class="english">Hot ↔ Cold</div></div></div>
+    <div class="phrase-card" style="border-color:#66BB6A"><div class="emoji">😊😢</div><div class="text"><div class="marathi">आनंदी ↔ दुःखी</div><div class="translit">Aanandi ↔ Duhkhi</div><div class="english">Happy ↔ Sad</div></div></div>
+    <div class="phrase-card" style="border-color:#AB47BC"><div class="emoji">🌞🌙</div><div class="text"><div class="marathi">दिवस ↔ रात्र</div><div class="translit">Divas ↔ Raatra</div><div class="english">Day ↔ Night</div></div></div>
+    <div class="phrase-card" style="border-color:#EF5350"><div class="emoji">🐇🐢</div><div class="text"><div class="marathi">जलद ↔ हळू</div><div class="translit">Jalad ↔ Halu</div><div class="english">Fast ↔ Slow</div></div></div>
+    <div class="phrase-card" style="border-color:#26C6DA"><div class="emoji">⬆️⬇️</div><div class="text"><div class="marathi">वर ↔ खाली</div><div class="translit">Var ↔ Khaali</div><div class="english">Up ↔ Down</div></div></div>
+    <div class="phrase-card" style="border-color:#FFA726"><div class="emoji">💡🌑</div><div class="text"><div class="marathi">उजेड ↔ अंधार</div><div class="translit">Ujed ↔ Andhaar</div><div class="english">Light ↔ Dark</div></div></div>
+    <div class="phrase-card" style="border-color:#78909C"><div class="emoji">⬆️⬇️</div><div class="text"><div class="marathi">उंच ↔ ठेंगणा</div><div class="translit">Uncha ↔ Thengnaa</div><div class="english">Tall ↔ Short</div></div></div>
+  </div>
+</div>
+
+<!-- ========== LEVEL 2 ========== -->
+<div class="level-banner level2-banner">
+  <h2>🚀 Level 2 — Next Level! 🚀</h2>
+  <div class="subtitle">Great job learning the basics! Now let's go further 🌟</div>
+  <div style="font-size:24px; margin-top:6px;">🏆 📚 🧩 🎵</div>
+</div>
+
+<!-- NUMBERS 11-20 -->
+<div class="section">
+  <div class="section-title st-purple">🔢 Numbers 11–20</div>
+  <div class="card-grid">
+    <div class="card number-card"><div class="emoji">1️⃣1️⃣</div><div class="marathi">अकरा</div><div class="translit">Akaraa</div><div class="english">11</div></div>
+    <div class="card number-card"><div class="emoji">1️⃣2️⃣</div><div class="marathi">बारा</div><div class="translit">Baaraa</div><div class="english">12</div></div>
+    <div class="card number-card"><div class="emoji">1️⃣3️⃣</div><div class="marathi">तेरा</div><div class="translit">Teraa</div><div class="english">13</div></div>
+    <div class="card number-card"><div class="emoji">1️⃣4️⃣</div><div class="marathi">चौदा</div><div class="translit">Chaudaa</div><div class="english">14</div></div>
+    <div class="card number-card"><div class="emoji">1️⃣5️⃣</div><div class="marathi">पंधरा</div><div class="translit">Pandhraa</div><div class="english">15</div></div>
+    <div class="card number-card"><div class="emoji">1️⃣6️⃣</div><div class="marathi">सोळा</div><div class="translit">Solaa</div><div class="english">16</div></div>
+    <div class="card number-card"><div class="emoji">1️⃣7️⃣</div><div class="marathi">सतरा</div><div class="translit">Sataraa</div><div class="english">17</div></div>
+    <div class="card number-card"><div class="emoji">1️⃣8️⃣</div><div class="marathi">अठरा</div><div class="translit">Atharaa</div><div class="english">18</div></div>
+    <div class="card number-card"><div class="emoji">1️⃣9️⃣</div><div class="marathi">एकोणीस</div><div class="translit">Ekonis</div><div class="english">19</div></div>
+    <div class="card number-card"><div class="emoji">2️⃣0️⃣</div><div class="marathi">वीस</div><div class="translit">Vees</div><div class="english">20</div></div>
+  </div>
+</div>
+
+<!-- MONTHS -->
+<div class="section">
+  <div class="section-title st-blue">🗓️ Months — महिने (Mahine)</div>
+  <div class="card-grid">
+    <div class="card"><div class="emoji">❄️</div><div class="marathi">जानेवारी</div><div class="translit">Jaanevaari</div><div class="english">January</div></div>
+    <div class="card"><div class="emoji">💕</div><div class="marathi">फेब्रुवारी</div><div class="translit">Februvaari</div><div class="english">February</div></div>
+    <div class="card"><div class="emoji">🌸</div><div class="marathi">मार्च</div><div class="translit">March</div><div class="english">March</div></div>
+    <div class="card"><div class="emoji">🌞</div><div class="marathi">एप्रिल</div><div class="translit">April</div><div class="english">April</div></div>
+    <div class="card"><div class="emoji">🥭</div><div class="marathi">मे</div><div class="translit">Me</div><div class="english">May</div></div>
+    <div class="card"><div class="emoji">🌧️</div><div class="marathi">जून</div><div class="translit">June</div><div class="english">June</div></div>
+    <div class="card"><div class="emoji">☔</div><div class="marathi">जुलै</div><div class="translit">Julai</div><div class="english">July</div></div>
+    <div class="card"><div class="emoji">🌦️</div><div class="marathi">ऑगस्ट</div><div class="translit">August</div><div class="english">August</div></div>
+    <div class="card"><div class="emoji">🍂</div><div class="marathi">सप्टेंबर</div><div class="translit">September</div><div class="english">September</div></div>
+    <div class="card"><div class="emoji">🎃</div><div class="marathi">ऑक्टोबर</div><div class="translit">October</div><div class="english">October</div></div>
+    <div class="card"><div class="emoji">🪔</div><div class="marathi">नोव्हेंबर</div><div class="translit">November</div><div class="english">November</div></div>
+    <div class="card"><div class="emoji">🎄</div><div class="marathi">डिसेंबर</div><div class="translit">December</div><div class="english">December</div></div>
+  </div>
+</div>
+
+<!-- SEASONS -->
+<div class="section">
+  <div class="section-title st-green">🌤️ Seasons — ऋतू (Rutu)</div>
+  <div class="card-grid">
+    <div class="card"><div class="emoji">☀️</div><div class="marathi">उन्हाळा</div><div class="translit">Unhaala</div><div class="english">Summer</div></div>
+    <div class="card"><div class="emoji">🌧️</div><div class="marathi">पावसाळा</div><div class="translit">Pavsaala</div><div class="english">Rainy</div></div>
+    <div class="card"><div class="emoji">❄️</div><div class="marathi">हिवाळा</div><div class="translit">Hivaala</div><div class="english">Winter</div></div>
+    <div class="card"><div class="emoji">🌿</div><div class="marathi">वसंत</div><div class="translit">Vasant</div><div class="english">Spring</div></div>
+    <div class="card"><div class="emoji">🍂</div><div class="marathi">शरद</div><div class="translit">Sharad</div><div class="english">Autumn</div></div>
+  </div>
+</div>
+
+<!-- FEELINGS -->
+<div class="section">
+  <div class="section-title st-pink">😊 Feelings — भावना (Bhaavnaa)</div>
+  <div class="card-grid">
+    <div class="card"><div class="emoji">😊</div><div class="marathi">आनंदी</div><div class="translit">Aanandi</div><div class="english">Happy</div></div>
+    <div class="card"><div class="emoji">😢</div><div class="marathi">दुःखी</div><div class="translit">Duhkhi</div><div class="english">Sad</div></div>
+    <div class="card"><div class="emoji">😠</div><div class="marathi">रागावलेला</div><div class="translit">Raagaavlelaa</div><div class="english">Angry</div></div>
+    <div class="card"><div class="emoji">😨</div><div class="marathi">घाबरलेला</div><div class="translit">Ghaabarlela</div><div class="english">Scared</div></div>
+    <div class="card"><div class="emoji">😴</div><div class="marathi">झोपाळू</div><div class="translit">Zhopaalu</div><div class="english">Sleepy</div></div>
+    <div class="card"><div class="emoji">🤒</div><div class="marathi">आजारी</div><div class="translit">Aajaari</div><div class="english">Sick</div></div>
+    <div class="card"><div class="emoji">🥰</div><div class="marathi">प्रेमळ</div><div class="translit">Premal</div><div class="english">Loving</div></div>
+    <div class="card"><div class="emoji">😮</div><div class="marathi">आश्चर्यचकित</div><div class="translit">Aashcharyachakit</div><div class="english">Surprised</div></div>
+  </div>
+</div>
+
+<!-- PLACES -->
+<div class="section">
+  <div class="section-title st-teal">📍 Places — ठिकाणे (Thikaane)</div>
+  <div class="card-grid">
+    <div class="card"><div class="emoji">🏠</div><div class="marathi">घर</div><div class="translit">Ghar</div><div class="english">Home</div></div>
+    <div class="card"><div class="emoji">🏫</div><div class="marathi">शाळा</div><div class="translit">Shaalaa</div><div class="english">School</div></div>
+    <div class="card"><div class="emoji">🏪</div><div class="marathi">दुकान</div><div class="translit">Dukaan</div><div class="english">Shop</div></div>
+    <div class="card"><div class="emoji">🛕</div><div class="marathi">मंदिर</div><div class="translit">Mandir</div><div class="english">Temple</div></div>
+    <div class="card"><div class="emoji">🏥</div><div class="marathi">दवाखाना</div><div class="translit">Davakhaanaa</div><div class="english">Hospital</div></div>
+    <div class="card"><div class="emoji">🌳</div><div class="marathi">बाग</div><div class="translit">Baag</div><div class="english">Garden</div></div>
+    <div class="card"><div class="emoji">🏖️</div><div class="marathi">समुद्रकिनारा</div><div class="translit">Samudra-kinaaraa</div><div class="english">Beach</div></div>
+    <div class="card"><div class="emoji">🚉</div><div class="marathi">स्टेशन</div><div class="translit">Station</div><div class="english">Station</div></div>
+  </div>
+</div>
+
+<!-- QUESTIONS -->
+<div class="section">
+  <div class="section-title st-orange">❓ Questions Kids Ask — प्रश्न</div>
+  <div class="phrase-grid">
+    <div class="phrase-card" style="border-color:#FF7043"><div class="emoji">🤷</div><div class="text"><div class="marathi">हे काय आहे?</div><div class="translit">He kaay aahe?</div><div class="english">What is this?</div></div></div>
+    <div class="phrase-card" style="border-color:#42A5F5"><div class="emoji">📍</div><div class="text"><div class="marathi">ते कुठे आहे?</div><div class="translit">Te kuthe aahe?</div><div class="english">Where is that?</div></div></div>
+    <div class="phrase-card" style="border-color:#66BB6A"><div class="emoji">🤔</div><div class="text"><div class="marathi">का?</div><div class="translit">Kaa?</div><div class="english">Why?</div></div></div>
+    <div class="phrase-card" style="border-color:#AB47BC"><div class="emoji">👤</div><div class="text"><div class="marathi">हे कोण आहे?</div><div class="translit">He kon aahe?</div><div class="english">Who is this?</div></div></div>
+    <div class="phrase-card" style="border-color:#EF5350"><div class="emoji">⏰</div><div class="text"><div class="marathi">केव्हा?</div><div class="translit">Kevhaa?</div><div class="english">When?</div></div></div>
+    <div class="phrase-card" style="border-color:#26C6DA"><div class="emoji">🔢</div><div class="text"><div class="marathi">किती?</div><div class="translit">Kiti?</div><div class="english">How many?</div></div></div>
+    <div class="phrase-card" style="border-color:#FFA726"><div class="emoji">🍪</div><div class="text"><div class="marathi">मला मिळेल का?</div><div class="translit">Mala milel kaa?</div><div class="english">Can I have it?</div></div></div>
+    <div class="phrase-card" style="border-color:#78909C"><div class="emoji">🚗</div><div class="text"><div class="marathi">आपण कुठे जातोय?</div><div class="translit">Aapan kuthe jaatoy?</div><div class="english">Where are we going?</div></div></div>
+  </div>
+</div>
+
+<!-- MINI CONVERSATIONS -->
+<div class="section">
+  <div class="section-title st-blue">💬 Mini Conversations — छोटे संवाद</div>
+  <div class="convo-grid">
+    <div style="background:#FFF8E1; border-radius:20px; padding:18px; border:2px solid #FFE082; margin-bottom:8px;">
+      <div style="font-weight:700; color:#F57F17; margin-bottom:10px; font-size:15px;">🗣️ Meeting Someone</div>
+      <div class="convo-card"><div class="speaker">👩</div><div class="bubble"><div class="marathi">नमस्कार! तुझे नाव काय?</div><div class="translit">Namaskaar! Tuzhe naav kaay?</div><div class="english">Hello! What is your name?</div></div></div>
+      <div class="convo-card"><div class="speaker">👧</div><div class="bubble reply"><div class="marathi">माझे नाव रिया आहे!</div><div class="translit">Maazhe naav Riya aahe!</div><div class="english">My name is Riya!</div></div></div>
+      <div class="convo-card"><div class="speaker">👩</div><div class="bubble"><div class="marathi">छान! भेटून आनंद झाला!</div><div class="translit">Chhaan! Bhetun aanand zhaalaa!</div><div class="english">Nice! Pleased to meet you!</div></div></div>
+    </div>
+    <div style="background:#E8F5E9; border-radius:20px; padding:18px; border:2px solid #A5D6A7; margin-bottom:8px;">
+      <div style="font-weight:700; color:#2E7D32; margin-bottom:10px; font-size:15px;">🍽️ At Mealtime</div>
+      <div class="convo-card"><div class="speaker">👦</div><div class="bubble"><div class="marathi">आई, मला भूक लागली!</div><div class="translit">Aai, mala bhook laagli!</div><div class="english">Mom, I'm hungry!</div></div></div>
+      <div class="convo-card"><div class="speaker">👩</div><div class="bubble reply"><div class="marathi">काय खाणार? भात की चपाती?</div><div class="translit">Kaay khaanaar? Bhaat ki chapaati?</div><div class="english">What will you eat? Rice or roti?</div></div></div>
+      <div class="convo-card"><div class="speaker">👦</div><div class="bubble"><div class="marathi">मला भात आणि आमटी हवी!</div><div class="translit">Mala bhaat aani aamti havi!</div><div class="english">I want rice and dal!</div></div></div>
+    </div>
+    <div style="background:#F3E5F5; border-radius:20px; padding:18px; border:2px solid #CE93D8;">
+      <div style="font-weight:700; color:#7B1FA2; margin-bottom:10px; font-size:15px;">🌳 At the Park</div>
+      <div class="convo-card"><div class="speaker">👧</div><div class="bubble"><div class="marathi">बाबा, चल बागेत जाऊया!</div><div class="translit">Baabaa, chal baaget jaauya!</div><div class="english">Dad, let's go to the garden!</div></div></div>
+      <div class="convo-card"><div class="speaker">👨</div><div class="bubble reply"><div class="marathi">चल! तिथे फुले आणि झाडे आहेत.</div><div class="translit">Chal! Tithe phule aani zhaade aahet.</div><div class="english">Let's go! There are flowers and trees.</div></div></div>
+      <div class="convo-card"><div class="speaker">👧</div><div class="bubble"><div class="marathi">बघ! एक पक्षी! किती सुंदर!</div><div class="translit">Bagh! Ek pakshi! Kiti sundar!</div><div class="english">Look! A bird! So beautiful!</div></div></div>
+    </div>
+  </div>
+</div>
+
+<!-- RHYMES -->
+<div class="section">
+  <div class="section-title st-yellow">🎵 Marathi Rhymes — मराठी गाणी</div>
+  <div class="rhyme-box">
+    <div style="font-size:18px; font-weight:800; color:#E65100; margin-bottom:16px;">🌧️ ये रे ये रे पावसा 🌧️</div>
+    <div class="marathi-line">ये रे ये रे पावसा,</div><div class="translit-line">Ye re ye re pavsaa,</div><div class="english-line">Come, come rain,</div>
+    <div class="marathi-line">तुला देतो पैसा.</div><div class="translit-line">Tulaa deto paisaa.</div><div class="english-line">I'll give you a coin.</div>
+    <hr class="divider">
+    <div class="marathi-line">पैसा झाला खोटा,</div><div class="translit-line">Paisaa zhaalaa khotaa,</div><div class="english-line">The coin turned out fake,</div>
+    <div class="marathi-line">पाऊस आला मोठा!</div><div class="translit-line">Paaus aalaa mothaa!</div><div class="english-line">But the rain came heavy!</div>
+  </div>
+  <div class="rhyme-box" style="margin-top:14px; border-color:#81C784; background: linear-gradient(135deg, #E8F5E9, #F1F8E9);">
+    <div style="font-size:18px; font-weight:800; color:#2E7D32; margin-bottom:16px;">🐦 चिऊ काऊ 🐦</div>
+    <div class="marathi-line">चिऊ चिऊ चिमणी,</div><div class="translit-line">Chiu chiu chimni,</div><div class="english-line">Chirp chirp sparrow,</div>
+    <div class="marathi-line">भरभर भात खाणी.</div><div class="translit-line">Bharbhar bhaat khaani.</div><div class="english-line">Quickly eating rice.</div>
+    <hr class="divider" style="border-color:#81C784">
+    <div class="marathi-line">काऊ काऊ काळा,</div><div class="translit-line">Kaau kaau kaalaa,</div><div class="english-line">Caw caw black crow,</div>
+    <div class="marathi-line">पोपट हिरवा गार!</div><div class="translit-line">Popat hirvaa gaar!</div><div class="english-line">The parrot is bright green!</div>
+  </div>
+</div>
+
+<!-- MINI STORY (Level 2) -->
+<div class="section">
+  <div class="section-title st-purple">📖 Mini Story — छोटी गोष्ट</div>
+  <div class="story-box">
+    <div class="story-title">🐱 मांजर आणि दूध 🥛</div>
+    <div class="story-line"><div class="emoji">🐱</div><div><div class="marathi">एक मांजर होते. त्याचे नाव मिंकू होते.</div><div class="translit">Ek maanjar hote. Tyaache naav Minku hote.</div><div class="english">There was a cat. Its name was Minku.</div></div></div>
+    <div class="story-line"><div class="emoji">🥛</div><div><div class="marathi">मिंकूला दूध खूप आवडते.</div><div class="translit">Minkula doodh khoop avadte.</div><div class="english">Minku loves milk very much.</div></div></div>
+    <div class="story-line"><div class="emoji">🏠</div><div><div class="marathi">एक दिवस, मिंकू स्वयंपाकघरात गेला.</div><div class="translit">Ek divas, Minku swayampaakgharaat gelaa.</div><div class="english">One day, Minku went to the kitchen.</div></div></div>
+    <div class="story-line"><div class="emoji">👀</div><div><div class="marathi">तिथे भांड्यात दूध होते!</div><div class="translit">Tithe bhaandyaat doodh hote!</div><div class="english">There was milk in a pot!</div></div></div>
+    <div class="story-line"><div class="emoji">😋</div><div><div class="marathi">मिंकूने सगळे दूध प्यायले.</div><div class="translit">Minkune sagale doodh pyaayle.</div><div class="english">Minku drank all the milk.</div></div></div>
+    <div class="story-line"><div class="emoji">😴</div><div><div class="marathi">मग मिंकू आनंदाने झोपला!</div><div class="translit">Mag Minku aanandaane zhoplaa!</div><div class="english">Then Minku slept happily!</div></div></div>
+    <div style="text-align:center; margin-top:14px; font-size:20px;">🐱💤 शुभ रात्री, मिंकू! 💤🐱</div>
+  </div>
+</div>
+
+<!-- LEVEL 2 QUIZ -->
+<div class="section">
+  <div class="section-title st-red">🧩 Fun Quiz — खेळ (Khel)</div>
+  <p style="color:#777; font-size:14px; margin-bottom:14px;">Tap the correct answer! 👆</p>
+  <div class="quiz-grid">
+    <div class="quiz-card"><div class="q">🐱 What is "Cat" in Marathi?</div><div class="options"><div class="opt" onclick="checkAns(this,'wrong')">कुत्रा</div><div class="opt" onclick="checkAns(this,'correct')">मांजर</div><div class="opt" onclick="checkAns(this,'wrong')">हत्ती</div></div><div class="feedback"></div></div>
+    <div class="quiz-card"><div class="q">🔴 What color is "लाल"?</div><div class="options"><div class="opt" onclick="checkAns(this,'wrong')">Blue</div><div class="opt" onclick="checkAns(this,'wrong')">Green</div><div class="opt" onclick="checkAns(this,'correct')">Red</div></div><div class="feedback"></div></div>
+    <div class="quiz-card"><div class="q">🔢 What is "तीन"?</div><div class="options"><div class="opt" onclick="checkAns(this,'wrong')">Two</div><div class="opt" onclick="checkAns(this,'correct')">Three</div><div class="opt" onclick="checkAns(this,'wrong')">Five</div></div><div class="feedback"></div></div>
+    <div class="quiz-card"><div class="q">👩 "आई" means?</div><div class="options"><div class="opt" onclick="checkAns(this,'wrong')">Father</div><div class="opt" onclick="checkAns(this,'wrong')">Sister</div><div class="opt" onclick="checkAns(this,'correct')">Mother</div></div><div class="feedback"></div></div>
+    <div class="quiz-card"><div class="q">🥭 "Mango" in Marathi?</div><div class="options"><div class="opt" onclick="checkAns(this,'correct')">आंबा</div><div class="opt" onclick="checkAns(this,'wrong')">केळे</div><div class="opt" onclick="checkAns(this,'wrong')">संत्रे</div></div><div class="feedback"></div></div>
+    <div class="quiz-card"><div class="q">💧 "पाणी" means?</div><div class="options"><div class="opt" onclick="checkAns(this,'wrong')">Milk</div><div class="opt" onclick="checkAns(this,'correct')">Water</div><div class="opt" onclick="checkAns(this,'wrong')">Juice</div></div><div class="feedback"></div></div>
+    <div class="quiz-card"><div class="q">🌧️ What is "पाऊस"?</div><div class="options"><div class="opt" onclick="checkAns(this,'correct')">Rain</div><div class="opt" onclick="checkAns(this,'wrong')">Sun</div><div class="opt" onclick="checkAns(this,'wrong')">Snow</div></div><div class="feedback"></div></div>
+    <div class="quiz-card"><div class="q">⭕ "वर्तुळ" is?</div><div class="options"><div class="opt" onclick="checkAns(this,'wrong')">Square</div><div class="opt" onclick="checkAns(this,'wrong')">Triangle</div><div class="opt" onclick="checkAns(this,'correct')">Circle</div></div><div class="feedback"></div></div>
+  </div>
+</div>
+
+<!-- ========== LEVEL 3 ========== -->
+<div class="level-banner level3-banner">
+  <h2>🌟 Level 3 — Growing Stronger! 🌟</h2>
+  <div class="subtitle">Grammar basics, writing practice, festivals, and fun activities!</div>
+  <div style="font-size:24px; margin-top:6px;">✍️ 🎪 🚗 👗 🧩</div>
+</div>
+
+<!-- GRAMMAR: GENDER -->
+<div class="section">
+  <div class="section-title st-purple">📖 Grammar — Gender (लिंग)</div>
+  <p style="color:#666; font-size:14px; margin-bottom:10px;">In Marathi, every noun is <strong>Masculine (पुल्लिंग)</strong>, <strong>Feminine (स्त्रीलिंग)</strong>, or <strong>Neuter (नपुंसकलिंग)</strong>:</p>
+  <table class="grammar-table">
+    <tbody><tr><th>Gender</th><th>Marathi</th><th>English</th><th>Pattern</th></tr>
+    <tr><td>👦 Masculine</td><td><span class="mr">मुलगा</span><br><span class="tl">Mulgaa</span></td><td>Boy</td><td>Ends in <strong>आ (aa)</strong></td></tr>
+    <tr><td>👦 Masculine</td><td><span class="mr">कुत्रा</span><br><span class="tl">Kutraa</span></td><td>Dog</td><td></td></tr>
+    <tr><td>👦 Masculine</td><td><span class="mr">घोडा</span><br><span class="tl">Ghodaa</span></td><td>Horse</td><td></td></tr>
+    <tr><td>👧 Feminine</td><td><span class="mr">मुलगी</span><br><span class="tl">Mulgi</span></td><td>Girl</td><td>Ends in <strong>ई (ee)</strong></td></tr>
+    <tr><td>👧 Feminine</td><td><span class="mr">गाय</span><br><span class="tl">Gaay</span></td><td>Cow</td><td></td></tr>
+    <tr><td>👧 Feminine</td><td><span class="mr">नदी</span><br><span class="tl">Nadi</span></td><td>River</td><td></td></tr>
+    <tr><td>⚪ Neuter</td><td><span class="mr">मूल</span><br><span class="tl">Mool</span></td><td>Child</td><td>Ends in <strong>ए (e)</strong></td></tr>
+    <tr><td>⚪ Neuter</td><td><span class="mr">पुस्तक</span><br><span class="tl">Pustak</span></td><td>Book</td><td></td></tr>
+    <tr><td>⚪ Neuter</td><td><span class="mr">फूल</span><br><span class="tl">Phool</span></td><td>Flower</td><td></td></tr>
+  </tbody></table>
+</div>
+
+<!-- SINGULAR & PLURAL -->
+<div class="section">
+  <div class="section-title st-blue">📖 Singular &amp; Plural — एकवचन आणि अनेकवचन</div>
+  <table class="grammar-table">
+    <tbody><tr><th>Singular</th><th>Plural</th><th>English</th></tr>
+    <tr><td><span class="mr">मुलगा</span> <span class="tl">Mulgaa</span></td><td><span class="mr">मुलगे</span> <span class="tl">Mulge</span></td><td>Boy → Boys</td></tr>
+    <tr><td><span class="mr">मुलगी</span> <span class="tl">Mulgi</span></td><td><span class="mr">मुली</span> <span class="tl">Muli</span></td><td>Girl → Girls</td></tr>
+    <tr><td><span class="mr">फूल</span> <span class="tl">Phool</span></td><td><span class="mr">फुले</span> <span class="tl">Phule</span></td><td>Flower → Flowers</td></tr>
+    <tr><td><span class="mr">मांजर</span> <span class="tl">Maanjar</span></td><td><span class="mr">मांजरे</span> <span class="tl">Maanjare</span></td><td>Cat → Cats</td></tr>
+    <tr><td><span class="mr">झाड</span> <span class="tl">Zhaad</span></td><td><span class="mr">झाडे</span> <span class="tl">Zhaade</span></td><td>Tree → Trees</td></tr>
+    <tr><td><span class="mr">गाय</span> <span class="tl">Gaay</span></td><td><span class="mr">गायी</span> <span class="tl">Gaayi</span></td><td>Cow → Cows</td></tr>
+  </tbody></table>
+</div>
+
+<!-- SENTENCE STRUCTURE -->
+<div class="section">
+  <div class="section-title st-green">🧱 Sentence Building — वाक्य बनवा</div>
+  <p style="color:#666; font-size:14px; margin-bottom:12px;">Marathi uses <strong>Subject → Object → Verb (SOV)</strong>. English: "I eat rice" → Marathi: "I rice eat" = <strong>मी भात खातो</strong>!</p>
+  <div class="sentence-builder">
+    <div class="label">Subject + Object + Verb</div>
+    <div class="structure"><span class="block block-subject">मी (I)</span><span class="block block-object">भात (rice)</span><span class="block block-verb">खातो (eat)</span></div>
+    <div class="example"><div class="mr">मी भात खातो.</div><div class="tl">Mi bhaat khaato.</div><div class="en">I eat rice.</div></div>
+  </div>
+  <div class="sentence-builder">
+    <div class="label">Subject + Object + Verb</div>
+    <div class="structure"><span class="block block-subject">ती (She)</span><span class="block block-object">पुस्तक (book)</span><span class="block block-verb">वाचते (reads)</span></div>
+    <div class="example"><div class="mr">ती पुस्तक वाचते.</div><div class="tl">Ti pustak vaachte.</div><div class="en">She reads a book.</div></div>
+  </div>
+  <div class="sentence-builder">
+    <div class="label">Subject + Place + Verb</div>
+    <div class="structure"><span class="block block-subject">आम्ही (We)</span><span class="block block-object">शाळेत (to school)</span><span class="block block-verb">जातो (go)</span></div>
+    <div class="example"><div class="mr">आम्ही शाळेत जातो.</div><div class="tl">Aamhi shaalet jaato.</div><div class="en">We go to school.</div></div>
+  </div>
+  <div class="sentence-builder">
+    <div class="label">Subject + "ला" (to/for) + Noun + Verb</div>
+    <div class="structure"><span class="block block-subject">मला (To me)</span><span class="block block-object">आंबा (mango)</span><span class="block block-verb">आवडतो (like)</span></div>
+    <div class="example"><div class="mr">मला आंबा आवडतो.</div><div class="tl">Mala aambaa aavadto.</div><div class="en">I like mango.</div></div>
+  </div>
+</div>
+
+<!-- PRONOUNS -->
+<div class="section">
+  <div class="section-title st-pink">👤 Pronouns — सर्वनामे (Sarvanaam)</div>
+  <table class="grammar-table">
+    <tbody><tr><th>English</th><th>Marathi</th><th>Pronunciation</th></tr>
+    <tr><td>I</td><td><span class="mr">मी</span></td><td><span class="tl">Mi</span></td></tr>
+    <tr><td>You (informal)</td><td><span class="mr">तू</span></td><td><span class="tl">Tu</span></td></tr>
+    <tr><td>You (respectful)</td><td><span class="mr">तुम्ही</span></td><td><span class="tl">Tumhi</span></td></tr>
+    <tr><td>He / This (m.)</td><td><span class="mr">तो / हा</span></td><td><span class="tl">To / Haa</span></td></tr>
+    <tr><td>She / This (f.)</td><td><span class="mr">ती / ही</span></td><td><span class="tl">Ti / Hi</span></td></tr>
+    <tr><td>It / This (n.)</td><td><span class="mr">ते / हे</span></td><td><span class="tl">Te / He</span></td></tr>
+    <tr><td>We</td><td><span class="mr">आम्ही / आपण</span></td><td><span class="tl">Aamhi / Aapan</span></td></tr>
+    <tr><td>They</td><td><span class="mr">ते / त्या</span></td><td><span class="tl">Te / Tyaa</span></td></tr>
+  </tbody></table>
+</div>
+
+<!-- WRITING PRACTICE -->
+<div class="section">
+  <div class="section-title st-orange">✍️ Writing Practice — लिहायला शिका</div>
+  <p style="color:#666; font-size:14px; margin-bottom:10px;">Trace these letters with your finger or print &amp; use a pencil! The शिरोरेखा (top line) connects letters in a word.</p>
+  <div class="trace-grid">
+    <div class="trace-card"><div class="big-letter">अ</div><div class="guide">a</div><div class="hint">3 strokes</div></div>
+    <div class="trace-card"><div class="big-letter">आ</div><div class="guide">aa</div><div class="hint">4 strokes</div></div>
+    <div class="trace-card"><div class="big-letter">क</div><div class="guide">ka</div><div class="hint">3 strokes</div></div>
+    <div class="trace-card"><div class="big-letter">ग</div><div class="guide">ga</div><div class="hint">3 strokes</div></div>
+    <div class="trace-card"><div class="big-letter">म</div><div class="guide">ma</div><div class="hint">3 strokes</div></div>
+    <div class="trace-card"><div class="big-letter">प</div><div class="guide">pa</div><div class="hint">3 strokes</div></div>
+    <div class="trace-card"><div class="big-letter">त</div><div class="guide">ta</div><div class="hint">2 strokes</div></div>
+    <div class="trace-card"><div class="big-letter">र</div><div class="guide">ra</div><div class="hint">2 strokes</div></div>
+    <div class="trace-card"><div class="big-letter">स</div><div class="guide">sa</div><div class="hint">3 strokes</div></div>
+    <div class="trace-card"><div class="big-letter">ह</div><div class="guide">ha</div><div class="hint">3 strokes</div></div>
+  </div>
+</div>
+
+<!-- TRANSPORT -->
+<div class="section">
+  <div class="section-title st-blue">🚗 Transport — वाहने (Vaahane)</div>
+  <div class="card-grid">
+    <div class="card"><div class="emoji">🚗</div><div class="marathi">गाडी</div><div class="translit">Gaadi</div><div class="english">Car</div></div>
+    <div class="card"><div class="emoji">🚌</div><div class="marathi">बस</div><div class="translit">Bus</div><div class="english">Bus</div></div>
+    <div class="card"><div class="emoji">🚂</div><div class="marathi">आगगाडी</div><div class="translit">Aaggaadi</div><div class="english">Train</div></div>
+    <div class="card"><div class="emoji">✈️</div><div class="marathi">विमान</div><div class="translit">Vimaan</div><div class="english">Airplane</div></div>
+    <div class="card"><div class="emoji">🚲</div><div class="marathi">सायकल</div><div class="translit">Saaykal</div><div class="english">Bicycle</div></div>
+    <div class="card"><div class="emoji">🛵</div><div class="marathi">दुचाकी</div><div class="translit">Duchaaki</div><div class="english">Scooter</div></div>
+    <div class="card"><div class="emoji">🚢</div><div class="marathi">जहाज</div><div class="translit">Jahaaj</div><div class="english">Ship</div></div>
+    <div class="card"><div class="emoji">🛺</div><div class="marathi">रिक्षा</div><div class="translit">Rikshaa</div><div class="english">Auto Rickshaw</div></div>
+  </div>
+</div>
+
+<!-- CLOTHES -->
+<div class="section">
+  <div class="section-title st-pink">👗 Clothes — कपडे (Kapde)</div>
+  <div class="card-grid">
+    <div class="card"><div class="emoji">👕</div><div class="marathi">सदरा / शर्ट</div><div class="translit">Sadraa / Shirt</div><div class="english">Shirt</div></div>
+    <div class="card"><div class="emoji">👖</div><div class="marathi">विजार</div><div class="translit">Vijaar</div><div class="english">Pants</div></div>
+    <div class="card"><div class="emoji">👗</div><div class="marathi">फ्रॉक</div><div class="translit">Frock</div><div class="english">Dress</div></div>
+    <div class="card"><div class="emoji">🥻</div><div class="marathi">साडी</div><div class="translit">Saadi</div><div class="english">Saree</div></div>
+    <div class="card"><div class="emoji">👟</div><div class="marathi">बूट</div><div class="translit">Boot</div><div class="english">Shoes</div></div>
+    <div class="card"><div class="emoji">🧢</div><div class="marathi">टोपी</div><div class="translit">Topi</div><div class="english">Cap</div></div>
+    <div class="card"><div class="emoji">🧦</div><div class="marathi">मोजे</div><div class="translit">Moje</div><div class="english">Socks</div></div>
+    <div class="card"><div class="emoji">☂️</div><div class="marathi">छत्री</div><div class="translit">Chhatri</div><div class="english">Umbrella</div></div>
+  </div>
+</div>
+
+<!-- FESTIVALS -->
+<div class="section">
+  <div class="section-title st-yellow">🎪 Festivals — सण (San)</div>
+  <div class="festival-grid">
+    <div class="festival-card" style="border-color:#FF9800"><div class="emoji">🪔</div><div class="marathi">दिवाळी</div><div class="translit">Divaali</div><div class="english">Diwali</div><div class="desc">Festival of Lights 🕯️</div></div>
+    <div class="festival-card" style="border-color:#E91E63"><div class="emoji">🎨</div><div class="marathi">होळी</div><div class="translit">Holi</div><div class="english">Holi</div><div class="desc">Festival of Colors 🌈</div></div>
+    <div class="festival-card" style="border-color:#4CAF50"><div class="emoji">🐘</div><div class="marathi">गणेशोत्सव</div><div class="translit">Ganeshotsav</div><div class="english">Ganesh Chaturthi</div><div class="desc">गणपती बाप्पा मोरया! 🙏</div></div>
+    <div class="festival-card" style="border-color:#2196F3"><div class="emoji">🪁</div><div class="marathi">मकरसंक्रांती</div><div class="translit">Makarsankraanti</div><div class="english">Makar Sankranti</div><div class="desc">तिळगूळ घ्या, गोड बोला! 🪁</div></div>
+    <div class="festival-card" style="border-color:#9C27B0"><div class="emoji">🏇</div><div class="marathi">गुढीपाडवा</div><div class="translit">Gudhipaadva</div><div class="english">Gudi Padwa</div><div class="desc">Marathi New Year 🎉</div></div>
+    <div class="festival-card" style="border-color:#F44336"><div class="emoji">🎆</div><div class="marathi">दसरा</div><div class="translit">Dasaraa</div><div class="english">Dussehra</div><div class="desc">Victory of Good! ⚔️</div></div>
+    <div class="festival-card" style="border-color:#00BCD4"><div class="emoji">👧👦</div><div class="marathi">भाऊबीज</div><div class="translit">Bhaaubeej</div><div class="english">Bhau Beej</div><div class="desc">Brother-Sister love ❤️</div></div>
+    <div class="festival-card" style="border-color:#795548"><div class="emoji">🐂</div><div class="marathi">पोळा</div><div class="translit">Polaa</div><div class="english">Pola</div><div class="desc">Celebrating bulls 🐂</div></div>
+  </div>
+</div>
+
+<!-- TIME -->
+<div class="section">
+  <div class="section-title st-teal">⏰ Time — वेळ (Vel)</div>
+  <div class="card-grid">
+    <div class="card"><div class="emoji">🌅</div><div class="marathi">सकाळ</div><div class="translit">Sakaal</div><div class="english">Morning</div></div>
+    <div class="card"><div class="emoji">☀️</div><div class="marathi">दुपार</div><div class="translit">Dupaar</div><div class="english">Afternoon</div></div>
+    <div class="card"><div class="emoji">🌇</div><div class="marathi">संध्याकाळ</div><div class="translit">Sandhyaakaal</div><div class="english">Evening</div></div>
+    <div class="card"><div class="emoji">🌙</div><div class="marathi">रात्र</div><div class="translit">Raatra</div><div class="english">Night</div></div>
+    <div class="card"><div class="emoji">📅</div><div class="marathi">आज</div><div class="translit">Aaj</div><div class="english">Today</div></div>
+    <div class="card"><div class="emoji">⏪</div><div class="marathi">काल</div><div class="translit">Kaal</div><div class="english">Yesterday</div></div>
+    <div class="card"><div class="emoji">⏩</div><div class="marathi">उद्या</div><div class="translit">Udyaa</div><div class="english">Tomorrow</div></div>
+    <div class="card"><div class="emoji">🔜</div><div class="marathi">आता</div><div class="translit">Aataa</div><div class="english">Now</div></div>
+  </div>
+</div>
+
+<!-- DAILY ROUTINE -->
+<div class="section">
+  <div class="section-title st-green">🌞 My Daily Routine — माझी दिनचर्या</div>
+  <div class="phrase-grid">
+    <div class="phrase-card" style="border-color:#FFA726"><div class="emoji">🌅</div><div class="text"><div class="marathi">मी सकाळी उठतो/उठते.</div><div class="translit">Mi sakaali utthto / utthte.</div><div class="english">I wake up in the morning.</div></div></div>
+    <div class="phrase-card" style="border-color:#42A5F5"><div class="emoji">🪥</div><div class="text"><div class="marathi">मी दात घासतो/घासते.</div><div class="translit">Mi daath ghaasto / ghaaste.</div><div class="english">I brush my teeth.</div></div></div>
+    <div class="phrase-card" style="border-color:#66BB6A"><div class="emoji">🚿</div><div class="text"><div class="marathi">मी आंघोळ करतो/करते.</div><div class="translit">Mi aanghol karto / karte.</div><div class="english">I take a bath.</div></div></div>
+    <div class="phrase-card" style="border-color:#EF5350"><div class="emoji">🍽️</div><div class="text"><div class="marathi">मी नाश्ता करतो/करते.</div><div class="translit">Mi naashta karto / karte.</div><div class="english">I eat breakfast.</div></div></div>
+    <div class="phrase-card" style="border-color:#AB47BC"><div class="emoji">🏫</div><div class="text"><div class="marathi">मी शाळेत जातो/जाते.</div><div class="translit">Mi shaalet jaato / jaate.</div><div class="english">I go to school.</div></div></div>
+    <div class="phrase-card" style="border-color:#26C6DA"><div class="emoji">📖</div><div class="text"><div class="marathi">मी अभ्यास करतो/करते.</div><div class="translit">Mi abhyaas karto / karte.</div><div class="english">I study.</div></div></div>
+    <div class="phrase-card" style="border-color:#FFA726"><div class="emoji">🎮</div><div class="text"><div class="marathi">मी मित्रांबरोबर खेळतो/खेळते.</div><div class="translit">Mi mitraanbarobar khelto / khelte.</div><div class="english">I play with friends.</div></div></div>
+    <div class="phrase-card" style="border-color:#78909C"><div class="emoji">😴</div><div class="text"><div class="marathi">मी झोपतो/झोपते. शुभ रात्री!</div><div class="translit">Mi zhopto / zhopte. Shubh raatri!</div><div class="english">I sleep. Good night!</div></div></div>
+  </div>
+  <p style="color:#999; font-size:12px; margin-top:8px; text-align:center;">💡 Boy says: करतो/जातो &nbsp;|&nbsp; Girl says: करते/जाते</p>
+</div>
+
+<!-- LONGER STORY -->
+<div class="section">
+  <div class="section-title st-purple">📖 Longer Story — मोठी गोष्ट</div>
+  <div class="story-box" style="background: linear-gradient(135deg, #FFF3E0, #FFF8E1); border-color: #FFB74D;">
+    <div class="story-title">🐢🐇 कासव आणि ससा — The Tortoise and the Hare</div>
+    <div class="story-line"><div class="emoji">🐇</div><div><div class="marathi">एक ससा होता. तो खूप वेगाने धावत असे.</div><div class="translit">Ek sasaa hotaa. To khoop vegaane dhaavat ase.</div><div class="english">There was a hare. He ran very fast.</div></div></div>
+    <div class="story-line"><div class="emoji">🐢</div><div><div class="marathi">एक कासव होते. ते हळू हळू चालत असे.</div><div class="translit">Ek kaasav hote. Te halu halu chaalat ase.</div><div class="english">There was a tortoise. It walked slowly.</div></div></div>
+    <div class="story-line"><div class="emoji">🗣️</div><div><div class="marathi">ससा म्हणाला, "मी तुझ्यापेक्षा वेगवान आहे!"</div><div class="translit">Sasaa mhanalaa, "Mi tuzhyaapekshaa vegvaan aahe!"</div><div class="english">The hare said, "I am faster than you!"</div></div></div>
+    <div class="story-line"><div class="emoji">🐢</div><div><div class="marathi">कासव म्हणाले, "चल, शर्यत लावूया!"</div><div class="translit">Kaasav mhanaale, "Chal, sharyat laavuya!"</div><div class="english">The tortoise said, "Let's have a race!"</div></div></div>
+    <div class="story-line"><div class="emoji">🏁</div><div><div class="marathi">शर्यत सुरू झाली! ससा पुढे पळाला.</div><div class="translit">Sharyat suru zhaali! Sasaa pudhe palaalaa.</div><div class="english">The race started! The hare ran ahead.</div></div></div>
+    <div class="story-line"><div class="emoji">😴</div><div><div class="marathi">ससा विचार करू लागला, "कासव मागे आहे." तो झाडाखाली झोपला!</div><div class="translit">Sasaa vichaar karu laagalaa, "Kaasav maage aahe." To zhaadaakhaali zhoplaa!</div><div class="english">The hare thought, "Tortoise is far behind." He slept under a tree!</div></div></div>
+    <div class="story-line"><div class="emoji">🐢</div><div><div class="marathi">कासव चालतच राहिले. हळू पण सतत.</div><div class="translit">Kaasav chaalatach raahile. Halu pan satat.</div><div class="english">The tortoise kept walking. Slow but steady.</div></div></div>
+    <div class="story-line"><div class="emoji">🏆</div><div><div class="marathi">कासवाने शर्यत जिंकली! ससा उठला तेव्हा खूप उशीर झाला होता.</div><div class="translit">Kaasavaane sharyat jinkli! Sasaa uthlaa tevhaa khoop usheer zhaalaa hotaa.</div><div class="english">The tortoise won! When the hare woke up, it was too late.</div></div></div>
+    <div style="text-align:center; margin-top:16px; padding:12px; background:rgba(255,255,255,0.7); border-radius:12px;">
+      <div style="font-size:18px; font-weight:800; color:#E65100;">बोधकथा (Moral):</div>
+      <div style="font-size:16px; font-weight:700; font-family:'Noto Sans Devanagari',sans-serif; color:#333; margin-top:4px;">हळू हळू पण सतत चालणारा जिंकतो!</div>
+      <div style="font-size:13px; color:#888;">Halu halu pan satat chaalnaaraa jinkto!</div>
+      <div style="font-size:13px; color:#aaa;">Slow and steady wins the race! 🐢🏆</div>
+    </div>
+  </div>
+</div>
+
+<!-- BIG NUMBERS -->
+<div class="section">
+  <div class="section-title st-orange">🔢 Big Numbers — 20 to 100</div>
+  <div class="card-grid">
+    <div class="card number-card"><div class="emoji">2️⃣0️⃣</div><div class="marathi">वीस</div><div class="translit">Vees</div><div class="english">20</div></div>
+    <div class="card number-card"><div class="emoji">3️⃣0️⃣</div><div class="marathi">तीस</div><div class="translit">Tees</div><div class="english">30</div></div>
+    <div class="card number-card"><div class="emoji">4️⃣0️⃣</div><div class="marathi">चाळीस</div><div class="translit">Chaalis</div><div class="english">40</div></div>
+    <div class="card number-card"><div class="emoji">5️⃣0️⃣</div><div class="marathi">पन्नास</div><div class="translit">Pannaas</div><div class="english">50</div></div>
+    <div class="card number-card"><div class="emoji">6️⃣0️⃣</div><div class="marathi">साठ</div><div class="translit">Saath</div><div class="english">60</div></div>
+    <div class="card number-card"><div class="emoji">7️⃣0️⃣</div><div class="marathi">सत्तर</div><div class="translit">Sattar</div><div class="english">70</div></div>
+    <div class="card number-card"><div class="emoji">8️⃣0️⃣</div><div class="marathi">ऐंशी</div><div class="translit">Ainshi</div><div class="english">80</div></div>
+    <div class="card number-card"><div class="emoji">9️⃣0️⃣</div><div class="marathi">नव्वद</div><div class="translit">Navvad</div><div class="english">90</div></div>
+    <div class="card number-card"><div class="emoji">💯</div><div class="marathi">शंभर</div><div class="translit">Shambhar</div><div class="english">100</div></div>
+  </div>
+</div>
+
+<!-- MATCHING GAME -->
+<div class="section">
+  <div class="section-title st-red">🎯 Matching Game — जोड्या लावा</div>
+  <p style="color:#777; font-size:14px; margin-bottom:8px;">Click a Marathi word, then click its English match! 🔗</p>
+  <div class="match-container" id="matchGame">
+    <div class="match-col" id="matchLeft">
+      <div class="match-item" data-pair="1" onclick="selectMatch(this,'left')"><span class="mr">सूर्य</span></div>
+      <div class="match-item" data-pair="2" onclick="selectMatch(this,'left')"><span class="mr">पाणी</span></div>
+      <div class="match-item" data-pair="3" onclick="selectMatch(this,'left')"><span class="mr">गाडी</span></div>
+      <div class="match-item" data-pair="4" onclick="selectMatch(this,'left')"><span class="mr">शाळा</span></div>
+      <div class="match-item" data-pair="5" onclick="selectMatch(this,'left')"><span class="mr">आनंदी</span></div>
+      <div class="match-item" data-pair="6" onclick="selectMatch(this,'left')"><span class="mr">छत्री</span></div>
+    </div>
+    <div class="match-col" id="matchRight">
+      <div class="match-item" data-pair="4" onclick="selectMatch(this,'right')">🏫 School</div>
+      <div class="match-item" data-pair="6" onclick="selectMatch(this,'right')">☂️ Umbrella</div>
+      <div class="match-item" data-pair="1" onclick="selectMatch(this,'right')">☀️ Sun</div>
+      <div class="match-item" data-pair="3" onclick="selectMatch(this,'right')">🚗 Car</div>
+      <div class="match-item" data-pair="5" onclick="selectMatch(this,'right')">😊 Happy</div>
+      <div class="match-item" data-pair="2" onclick="selectMatch(this,'right')">💧 Water</div>
+    </div>
+  </div>
+  <div class="match-score" id="matchScore">🎉 All matched! शाब्बास! 🌟</div>
+</div>
+
+<!-- TIPS -->
+<div class="tip-box">
+  <h3>🌟 Tips for Parents — All Levels</h3>
+  <ul>
+    <li><strong>Point &amp; Say:</strong> Point at objects and say the Marathi word. Repeat daily!</li>
+    <li><strong>Sing Along:</strong> Marathi rhymes like "ये रे ये रे पावसा" make learning musical.</li>
+    <li><strong>Counting Game:</strong> Count toys, stairs in Marathi — एक, दोन, तीन!</li>
+    <li><strong>Color Hunt:</strong> "Find something लाल (red)!" — learning as a game.</li>
+    <li><strong>Daily Phrases:</strong> Use greetings (नमस्कार, धन्यवाद) every day.</li>
+    <li><strong>Act It Out:</strong> Say "नाचणे!" and dance, "धावणे!" and run!</li>
+    <li><strong>Storytelling:</strong> Read the stories aloud with expressions.</li>
+    <li><strong>Quiz Time:</strong> Use the interactive quizzes — kids love tapping answers!</li>
+    <li><strong>Matching Game:</strong> Play together for word recognition practice.</li>
+    <li><strong>Sentence Building:</strong> Use the color blocks — Subject + Object + Verb!</li>
+    <li><strong>Festival Fun:</strong> During Ganeshotsav, teach "गणपती बाप्पा मोरया!"</li>
+    <li><strong>Daily Routine:</strong> Narrate the child's day in Marathi.</li>
+    <li><strong>Writing:</strong> Print trace cards — start with अ, आ, क, म.</li>
+  </ul>
+</div>
+
+<div class="footer">
+  Made with ❤️ for little Marathi learners • मराठी शिकूया! 🌟<br>
+  Level 1 · Level 2 · Level 3 — Complete Guide
+</div>
+
+<script>
+function checkAns(el, result) {
+  var card = el.closest('.quiz-card');
+  if (card.dataset.answered) return;
+  card.dataset.answered = 'true';
+  el.classList.add(result);
+  var fb = card.querySelector('.feedback');
+  if (result === 'correct') {
+    fb.textContent = '🎉 Correct! शाब्बास!';
+    fb.style.color = '#2E7D32';
+  } else {
+    fb.textContent = '😊 Try again next time!';
+    fb.style.color = '#C62828';
+  }
+  fb.style.display = 'block';
+}
+
+var matchState = { left: null, right: null, matched: 0, total: 6 };
+function selectMatch(el, side) {
+  if (el.classList.contains('matched')) return;
+  var col = document.getElementById(side === 'left' ? 'matchLeft' : 'matchRight');
+  col.querySelectorAll('.match-item.selected').forEach(function(item) { item.classList.remove('selected'); });
+  el.classList.add('selected');
+  matchState[side] = el;
+  if (matchState.left && matchState.right) {
+    if (matchState.left.dataset.pair === matchState.right.dataset.pair) {
+      matchState.left.classList.add('matched'); matchState.left.classList.remove('selected');
+      matchState.right.classList.add('matched'); matchState.right.classList.remove('selected');
+      matchState.matched++;
+      if (matchState.matched === matchState.total) document.getElementById('matchScore').style.display = 'block';
+    } else {
+      matchState.left.classList.remove('selected');
+      matchState.right.classList.remove('selected');
+    }
+    matchState.left = null; matchState.right = null;
+  }
+}
+</script>
+
+
+</body></html>
